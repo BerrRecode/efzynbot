@@ -1,0 +1,9 @@
+INGFO
+
+untuk LeysApi bisa beli di https://leyscoders-api.herokuapp.com
+harga 10k, jika sudah beli masukkan ke file apikey.json
+
+LolHuman juga sama bisa beli di http://api.lolhuman.xyz
+harga 10k, 25k, jika sudah beli masukkan ke file apikey.json
+
+Thanks:)
