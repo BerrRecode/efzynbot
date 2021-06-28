@@ -368,19 +368,37 @@ if (!welkom.includes(anu.jid)) return
         shortpc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppimg}`)
         shortgc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppgc}`)
          if (anu.action == 'add') {
-         	img = await getBuffer(`https://servant-of-evil.herokuapp.com/api/swiftlite/welkom?nama=${encodeUrl(namaewa)}&gc=${encodeUrl(mdata.subject)}&ppgc=${shortgc.data}&pp=${shortpc.data}&bg=https://dappa-result.herokuapp.com/bgverify.jpeg&member=${mdata.participants.length}&apikey=GFL`)
-            teks = `Hai ${namaewa}\n◪ Welcome in group:\n├─ ${mdata.subject}\n\n├─ Intro dulu\n├─ ❏ Nama: \n├─ ❏ Umur: \n├─ ❏ Asal kota: \n├─ ❏ Kelas: \n├─ ❏ Jenis kelamin: \n└─ ❏ Nomor: ${num.replace('@s.whatsapp.net', '')}\nSemoga Betah yaa~~\n${ini_user.notify}`
+  img = await getBuffer(`https://api.lolhuman.xyz/api/base/welcome?apikey=${LolKey}&img1=${shortpc.data}&img2=${shortgc.data}&background=https://i.ibb.co/sy2kd1z/20210628-211931.jpg&username=${encodeUrl(namaewa)}&member=${mdata.participants.length}&groupname=${encodeUrl(mdata.subject)}`)
+  teks = `Hai ${namaewa}
+  ◪ Welcome in group:
+  ├─ ${mdata.subject}
+  ├─ jangan lupa Intro!
+  ├─ ❏ Nama: 
+  ├─ ❏ Umur: 
+  ├─ ❏ Asal kota: 
+  ├─ ❏ Kelas: 
+  ├─ ❏ Jenis kelamin: 
+  └─ ❏ Nomor: ${num.replace('@s.whatsapp.net', '')}
+  ❥ketik *!verify* sebelum menggunakan bot
+  ❥ketik *!menu* untuk melihat fitur bot!
+  ❥Semoga Betah ya~~\n${ini_user.notify}`
             dp.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]} })
          } else if (anu.action == 'remove') {
-         	img = await getBuffer(`https://servant-of-evil.herokuapp.com/api/swiftlite/goodbye?nama=${encodeUrl(namaewa)}&gc=${encodeUrl(mdata.subject)}&ppgc=${shortgc.data}&pp=${shortpc.data}&bg=https://dappa-result.herokuapp.com/bgverify.jpeg&member=${mdata.participants.length}&apikey=GFL`)
-            teks = `◪ Goodbye ${namaewa}\n◪ Leave from group:\n${mdata.subject}\n\n└─ ❏ Nomor: ${num.replace('@s.whatsapp.net', '')}\nGoodBye~~`
-            dp.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
+          img = await getBuffer(`https://api.lolhuman.xyz/api/base/leave?apikey=${LolKey}&img1=${shortpc.data}&img2=${shortgc.data}&background=https://i.ibb.co/sy2kd1z/20210628-211931.jpg&username=${encodeUrl(namaewa)}&member=${mdata.participants.length}&groupname=${encodeUrl(mdata.subject)}`)
+  teks = `Goodbye ${namaewa}
+  ◪ Leave from group:
+  ├─ ${mdata.subject}
+  └─ ❏ Nomor: ${num.replace('@s.whatsapp.net', '')}
+  ❥Al-Fatihah buat yang keluar:)
+  ❥Semoga tenang ya:)
+  ❥Good bye ngab~~`
+            dp.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]} })
          } else if (anu.action == 'promote') {
-            img = await getBuffer(`http://hadi-api.herokuapp.com/api/card/promote?nama=${encodeUrl(namaewa)}&member=${member}&pesan=Selamat anda menjadi admin group!&pp=${shortpc.data}&bg=https://dappa-result.herokuapp.com/bgverify.jpeg`)
+            img = await getBuffer(`http://hadi-api.herokuapp.com/api/card/promote?nama=${encodeUrl(namaewa)}&member=${member}&pesan=Selamat anda menjadi admin group!&pp=${shortpc.data}&bg=https://i.ibb.co/sy2kd1z/20210628-211931.jpg`)
             teks = `◪ PROMOTE DETECT\n\n├─ Nomor: ${num.replace('@s.whatsapp.net', '')}\n├─ Pesan: Selamat anda menjadi admin group!\n└─ ❏ @${num.split('@')[0]}`
             dp.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
          } else if (anu.action == 'demote') {
-            img = await getBuffer(`http://hadi-api.herokuapp.com/api/card/demote?nama=${encodeUrl(namaewa)}&member=${member}&pesan=Awokawok di unadmin, mampus:v&pp=${shortpc.data}&bg=https://dappa-result.herokuapp.com/bgverify.jpeg`)
+            img = await getBuffer(`http://hadi-api.herokuapp.com/api/card/demote?nama=${encodeUrl(namaewa)}&member=${member}&pesan=Awokawok di unadmin, mampus:v&pp=${shortpc.data}&bg=https://i.ibb.co/sy2kd1z/20210628-211931.jpg`)
             teks = `◪ DEMOTE DETECT\n\n\n├─ Nomor: ${num.replace('@s.whatsapp.net', '')}\n├─ Pesan: Awokawok di unadmin, mampus:v\n└─ ❏ @${num.split('@')[0]}`
             dp.sendMessage(mdata.id, img, MessageType.image, {caption: teks, contextInfo: {'mentionedJid': [num]}})
          }
@@ -1529,7 +1547,7 @@ reply(`${emror}`)
 		        case 'lolhumcek':
                 //[❗] case by DappaGanz
                 try {
-                dapuhy = await fetchJson(`https://api.lolhuman.xyz/api/checkapikey?apikey=EfZyN-BoT1906`)
+                dapuhy = await fetchJson(`https://api.lolhuman.xyz/api/checkapikey?apikey=${LolKey}`)
                 i = dapuhy.result
                 vikey = `Apikey ${body.slice(11)} valid!\nUsername : ${i.username}\nRequests : ${i.requests}\nToday : ${i.today}\nAccount Type : ${i.account_type}\nExpired : ${i.expired}`
                 dp.sendMessage(from, vikey, text, {quoted: fkontak})
@@ -7837,7 +7855,6 @@ ownmenu = `
 ┣ ❐ ${prefix}ban
 ┣ ❐ ${prefix}unban
 ┣ ❐ ${prefix}bug
-┣ ❐ ${prefix}bugtroliv2
 ┗━━━┫EfZyN-BoTヅ┣━━━⊳  
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
