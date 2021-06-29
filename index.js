@@ -1423,14 +1423,6 @@ reply(`${emror}`)
                 if (isBanned) return reply(dpa.baned)
 				dp.sendMessage(from, donasi(), text, {quoted: fkontak})
 				break
-				case 'infoowner':
-		        case 'infodeveloper':
-		        case 'infopengembang':
-                if (!isUser) return reply(dpa.noregis)
-                if (isLimit(sender)) return reply(dpa.limitend)
-                if (isBanned) return reply(dpa.baned)
-				dp.sendMessage(from, infown(), text, {quoted: fkontak})
-				break
 				case 'bahasa':
                 if (!isUser) return reply(dpa.noregis)
                 if (isLimit(sender)) return reply(dpa.limitend)
@@ -5255,7 +5247,54 @@ moviemn = `
                 dp.sendMessage(from, textcuk, text, {quoted: fkontak})
                 await limitAdd(sender)
                 break
+                case 'infoowner':
+		        case 'infodeveloper':
+		        case 'infopengembang':
+		           //case ⌈❗」 by  Fauzan
+                if (!isUser) return reply(dpa.noregis)
+                buffer = await getBuffer('https://i.ibb.co/dQn5btb/IMG-20210629-WA0443.jpg')
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
                 
+ infownr = `◪ Hallo my name is Fauzan
+├ From: Situbondo, East Java, Indonesia
+├ was born: Situbondo, 19 june 2003
+├ Age: 18 years old
+└─┤My Social Media├─⊳⊳
+  ├─ ❏ WhatsApp
+  ├─ ❏ 085156724122
+  ├─ ❏ Github
+  ├─ ❏ https://github.com/efzyn
+  ├─ ❏ Instagram
+  └─ ❏ https://www.instagram.com/efzyn_`
+				dp.sendMessage(from, buffer, image, {quoted: freply, caption: infownr})
+				break
+                
+                case 'infosc':
+                  case 'sc':
+                    case 'script':
+                      //case ⌈❗」 by  Fauzan
+                if (!isUser) return reply(dpa.noregis)
+                buffer = await getBuffer('https://i.ibb.co/dgcQFyr/IMG-20210629-WA0453.jpg')
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
+               
+esceh = `
+❥ *info script bot*
+├⊳⊳ Base: MhankBarBar
+├⊳⊳ Creator 1: dappauhuy
+├⊳⊳ Creator 2: Fauzan
+├⊳⊳ Owner: ${namaowner}
+│
+└──┤Link Github├────❥
+  ├✜ Github Efzyn
+  ├✜ https://github.com/efzyn
+  ├✜ Github SC bot
+  ├✜ https://github.com/efzyn/efzynbot.git
+  └───────────────────⊳⊳⊳ `
+                       dp.sendMessage(from, buffer, image, {quoted: freply, caption: esceh})
+                break
+
                 case 'infomenu':
                 //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
@@ -5281,6 +5320,9 @@ infoomenu = `
 
 ┏「 𝙄𝙉𝙁𝙊 𝙈𝙀𝙉𝙐 ˩
 ┣━━━━━━━━━━⊳⊳⊳
+┣ ❐ ${prefix}info
+┣ ❐ ${prefix}infoowner
+┣ ❐ ${prefix}infosc
 ┣ ❐ ${prefix}covidglobal 
 ┣ ❐ ${prefix}covidindo
 ┣ ❐ ${prefix}jadwaltv
