@@ -7654,7 +7654,6 @@ grpmn = `
 				await limitAdd(sender)
 				break
 				case 'bc':
-        if (!isGroupAdmins) return reply(dpa.admin)
         if (!isOwner) return reply(dpa.ownerb)
 				if (args.length < 1) return reply('pesannya mana?')
 				anu = await dp.chats.all()
