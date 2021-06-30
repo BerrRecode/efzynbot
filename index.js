@@ -7328,7 +7328,7 @@ sertimn = `
                 }else{
                 const mining = Math.ceil(Math.random() * 16)
                 addLevelingXp(sender, mining)
-                await reply(`selamat ${namaowner} kamu mendapatkan ${mining}Xp`)
+                await reply(`selamat ${pushname} kamu mendapatkan ${mining}Xp`)
                 }
                 await limitAdd(sender)
 				break
