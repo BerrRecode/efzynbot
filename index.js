@@ -57,6 +57,7 @@ const { cheat } = require('./lib/cheat')
 const { animesaran } = require('./lib/animesaran')
 const { animesaran2 } = require('./lib/animesaran2')
 const { donasi } = require('./lib/donasi')
+const { update } = require('./lib/update')
 const { infown } = require('./lib/infown')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -74,6 +75,7 @@ const { convertSticker } = require('./plugins/swm.js')
 //Modal Dikit Broh:v
 LeysKey = 'dappakntlll' //beli di https://leyscoders-api.herokuapp.com
 LolKey = 'YOUR APIKEY' //beli di https://api.lolhuman.xyz
+ZeksKey = 'YOUR APIKEY' //beli lah di https://zeks.xyz
 
 //Settings => Semua Aturnya Disini <=
 fake = 'EITS ADA ANTIDELETE🐦:v'
@@ -329,7 +331,7 @@ dp.logger.level = 'warn'
 console.log(banner.string)
    dp.on('qr', qr => {
    qrcode.generate(qr, { small: true })
-	console.log(color('(+)','white'), color('Fauzan','red'), color('(+)','white'), color(' SQAN CODENYA','aqua'), color('FOLLOW IG GW','yellow'))
+	console.log(color('(+)','white'), color('Fauzan','red'), color('(+)','white'), color(' SQAN CODENYA','aqua'), color('FOLLOW IG GW @efzyn_','yellow'))
 })
 
 	dp.on('credentials-updated', () => {
@@ -1396,7 +1398,8 @@ await reply(m)
                 if (!isUser) return reply(dpa.noregis)
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
-				dp.sendMessage(from, 'Gw masih ON ngab',MessageType.text, {quoted: fkontak})
+              msgg = `Hi ${pushname}👋, ${namabot} is ACTIVATED❗, Gunakan dan perlakukan BOT sebaik mungkin❗`
+				dp.sendMessage(from, msgg ,MessageType.text, {quoted: fkontak})
 				break
 				case 'engpal':
 if (!isOwner) return
@@ -1422,6 +1425,12 @@ reply(`${emror}`)
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
 				dp.sendMessage(from, donasi(), text, {quoted: fkontak})
+				break
+					case 'update':
+                if (!isUser) return reply(dpa.noregis)
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
+				dp.sendMessage(from, update(), text, {quoted: fkontak})
 				break
 				case 'bahasa':
                 if (!isUser) return reply(dpa.noregis)
@@ -1584,7 +1593,6 @@ listmn = `
 
 ┌── ▣ 𝙄𝙣𝙛𝙤 𝘽𝙤𝙩 ▣ ──▻▻▻
 ├▣ 𝙽𝚊𝚖𝚊 𝙱𝚘𝚝 :${namabot}
-├▣ 𝚁𝚞𝚗 𝚃𝚒𝚖𝚎 :${kyun(process.uptime())}
 ├▣ 𝙿𝚛𝚎𝚏𝚒𝚡 : All Prefix dung
 ├▣ 𝙱𝚊𝚜𝚎 : MhankBarBar
 ├▣ 𝙲𝚛𝚎𝚊𝚝𝚘𝚛 : Dappa X Fauzan
@@ -2104,8 +2112,8 @@ listmn = `
                 } catch {
                 emoji = encodeURI(emoji)
                 }
-                ini_url = await fetchJson(`https://api.lolhuman.xyz/api/smoji3/${emoji}?apikey=${LolKey}`) 
-                ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=${LolKey}&img=${ini_url.result.emoji.whatsapp}&package=@${namabot}&author=${namaowner}`)
+                link = await fetchJson(`https://api.lolhuman.xyz/api/smoji3/${emoji}?apikey=${LolKey}`) 
+                ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=${LolKey}&img=${link.result.emoji.whatsapp}&package=@${namabot}&author=${namaowner}`)
                 dp.sendMessage(from, ini_buffer, sticker, { quoted: freply }) 
                 await limitAdd(sender)
                 } catch (e) {
@@ -3882,16 +3890,17 @@ animemn = `
 				await limitAdd(sender)
 				break
 				
-                    case 'asupanrandom':
-                  if (!isUser) return reply(dpa.noregis)
-			          	if (isBanned) return reply(dpa.baned)
-			           	if (isLimit(sender)) return reply(dpa.limitend)
-			           	reply(dpa.wait)
-                    aspnrnd = await fetchJson(`https://api.lolhuman.xyz/api/asupan?apikey=EfZyN-BoT1906`)
-                    vidnya = await getBuffer(aspnrnd.result)
-                    await dp.sendMessage(from, vidnya, video, { quoted: freply, mimetype: Mimetype.mp4, filename: "asupan.mp4" })
-                      await limitAdd(sender)
-				              break
+				      //⌈❗」case by  Fauzan
+            case 'asupan2':
+            if (!isUser) return reply(dpa.noregis)
+			     	if (isBanned) return reply(dpa.baned)
+			    	if (isLimit(sender)) return reply(dpa.limitend)
+			     	reply(dpa.wait)
+            asupn = await fetchJson(`http://api.lolhuman.xyz/api/asupan?apikey=${LolKey}`)
+            pideo2 = await getBuffer(asupn.result)
+            dp.sendMessage(from, pideo2, video, { quoted: freply, mimetype: Mimetype.mp4, filename: "asupan.mp4" })
+            await limitAdd(sender)
+                    break
 				
 				case 'asupanmenu':
 		            //case ⌈❗」 by  Fauzan
@@ -3920,12 +3929,12 @@ aspnmn = `
 ┏「 𝘼𝙎𝙐𝙋𝘼𝙉 𝙈𝙀𝙉𝙐 ˩
 ┣━━━━━━━━━━⊳⊳⊳
 ┣ ❐ ${prefix}asupan
+┣ ❐ ${prefix}asupan2
 ┣ ❐ ${prefix}asupansantuy
 ┣ ❐ ${prefix}asupanbocil
 ┣ ❐ ${prefix}asupanukhty
 ┣ ❐ ${prefix}asupanrikagusriani
 ┣ ❐ ${prefix}asupanghea
-┣ ❐ ${prefix}asupanrandom
 ┗━┫EfZyN-BoTヅ┣━⊳  
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
@@ -4139,6 +4148,41 @@ stalkmn = `
                 dp.sendMessage(from, buffer, MessageType.video, {quoted: freply})
                 await limitAdd(sender)
                 break
+                
+              case 'igdownload':
+                 //「❗」case by Fauzan
+                if (!isUser) return reply(dpa.noregis)
+				if (isBanned) return reply(dpa.baned)
+				if (isLimit(sender)) return reply(dpa.limitend)
+               if (args.length == 0) return reply(`Linknya mana ngab?\nContoh: ${prefix + command} https://www.instagram.com/p/CGOivksJleVPwIQfDBplW8nDrQmOX3aVCkzUO80/`)
+               reply(dpa.wait)
+                    link = args[0]
+                    link = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=${LolKey}&url=${link}`)
+                    link = link.result
+                    ini_type = image
+                    if (link.includes(".mp4")) ini_type = video
+                    ini_buffer = await getBuffer(link)
+                    dp.sendMessage(from, ini_buffer, ini_type, { quoted: freply})
+                    await limitAdd(sender)
+                    break
+                    
+                    case 'igstory':
+                  //「❗」case by Fauzan
+                if (!isUser) return reply(dpa.noregis)
+				if (isBanned) return reply(dpa.baned)
+				if (isLimit(sender)) return reply(dpa.limitend)
+               if (args.length < 1) return reply(`usernamenya mana?\ncontoh : ${prefix + command} efzyn_`)
+                reply(dpa.wait)
+                query = args.join(' ')
+                get_result = await fetchJson(`https://api.lolhuman.xyz/api/igstory?username=${username}&apikey=${LolKey}`)
+                get_result = get_result.result
+                ini_image = await getBuffer(get_result.image)
+                dp.sendMessage(from, ini_image, image, { quoted: freply})
+                get_video = await getBuffer(get_result.video)
+                dp.sendMessage(from, get_video, video, {quoted: freply, mimetype: Mimetype.mp4, filename: "igstory.mp4" })
+                await limitAdd(sender)
+                    break
+                
                 case 'igphoto':
                 //[❗] case by DappaGanz
 				if (!isUser) return reply(dpa.noregis)
@@ -4342,6 +4386,8 @@ downmenu = `
 ┣ ❐ ${prefix}ytmp4
 ┣ ❐ ${prefix}ytmp4v2
 ┣ ❐ ${prefix}ytmp3v3
+┣ ❐ ${prefix}igdownload
+┣ ❐ ${prefix}igstory (develop)
 ┣ ❐ ${prefix}igvideo
 ┣ ❐ ${prefix}igphoto
 ┗━━┫EfZyN-BoTヅ┣━━⊳  
@@ -5294,7 +5340,16 @@ esceh = `
   └───────────────────⊳⊳⊳ `
                        dp.sendMessage(from, buffer, image, {quoted: freply, caption: esceh})
                 break
-
+                
+                case 'runtime':
+                 if (!isUser) return reply(dpa.noregis)
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
+                runtime = process.uptime()
+                isi = `-----------𝚁𝚞𝚗𝚝𝚒𝚖𝚎⏰-----------\n${namabot} Telah AKTIF selama:\n -- ${kyun(process.uptime())} -- `
+                dp.sendMessage(from, isi ,MessageType.text, {quoted: fkontak})
+                  break
+                  
                 case 'infomenu':
                 //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
@@ -5323,6 +5378,8 @@ infoomenu = `
 ┣ ❐ ${prefix}info
 ┣ ❐ ${prefix}infoowner
 ┣ ❐ ${prefix}infosc
+┣ ❐ ${prefix}runtime
+┣ ❐ ${prefix}update
 ┣ ❐ ${prefix}covidglobal 
 ┣ ❐ ${prefix}covidindo
 ┣ ❐ ${prefix}jadwaltv
@@ -6705,9 +6762,9 @@ medimenu = `
 				    if (isLimit(sender)) return reply(dpa.limitend)
                     if (args.length < 1) return reply(`link mana broh?\ncontoh : ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
                     reply(dpa.wait)
-                    ini_url = args[0]
-                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/telestick?apikey=${LolKey}&url=${ini_url}`)
-                    ini_sticker = ini_url.result.sticker
+                    link = args[0]
+                    link = await fetchJson(`http://api.lolhuman.xyz/api/telestick?apikey=${LolKey}&url=${link}`)
+                    ini_sticker = link.result.sticker
                     for (sticker_ in ini_sticker) {
                         ini_buffer = await getBuffer(ini_sticker[sticker_])
                         dp.sendMessage(from, ini_buffer, sticker)
