@@ -601,6 +601,7 @@ dp.on('message-new', async (dap) => {
 			if (dap.key.fromMe) return
 			global.prefix
 			global.blocked
+			dap.message = (Object.keys(dap.message)[0] === 'ephemeralMessage') ? dap.message.ephemeralMessage.message : dap.message
 			const from = dap.key.remoteJid
 			const content = JSON.stringify(dap.message)
 			const type = Object.keys(dap.message)[0]
