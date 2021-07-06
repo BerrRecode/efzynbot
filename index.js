@@ -74,8 +74,8 @@ const { convertSticker } = require('./plugins/swm.js')
 
 //Modal Dikit Broh:v
 LeysKey = 'dappakntlll' //beli di https://leyscoders-api.herokuapp.com
-LolKey = 'YOUR APIKEY' //beli di https://api.lolhuman.xyz
-ZeksKey = 'YOUR APIKEY' //beli lah di https://zeks.xyz
+LolKey = 'FauzanBotz' //beli di https://api.lolhuman.xyz
+ZeksKey = 'efzynzeksapis' //beli lah di https://zeks.xyz
 
 //Settings => Semua Aturnya Disini <=
 fake = 'EITS ADA ANTIDELETE🐦:v'
