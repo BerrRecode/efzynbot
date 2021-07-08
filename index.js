@@ -1,13 +1,15 @@
 /*
 Base By MhankBarBar
 Recode By DappaUhuy
-Recode Doang Bang, Jan Dibully
+Recode By Fauzan
+Recode Doang Bang, Jan Dibully:)
 Ga Semua Case Buatan Gw, Ada Yang Copas
 
 Big Thanks To : Baileys
 
 Thanks To :
 Dappa:v
+Fauzan_-
 LolHuman
 LeysCoders
 CdnPixabay
@@ -74,8 +76,8 @@ const { convertSticker } = require('./plugins/swm.js')
 
 //Modal Dikit Broh:v
 LeysKey = 'dappakntlll' //beli di https://leyscoders-api.herokuapp.com
-LolKey = 'FauzanBotz' //beli di https://api.lolhuman.xyz
-ZeksKey = 'efzynzeksapis' //beli lah di https://zeks.xyz
+LolKey = 'YOUR APIKEY' //beli di https://api.lolhuman.xyz
+ZeksKey = 'YOUR APIKEY' //beli lah di https://zeks.xyz
 
 //Settings => Semua Aturnya Disini <=
 fake = 'EITS ADA ANTIDELETE🐦:v'
@@ -1423,9 +1425,24 @@ reply(`${emror}`)
 				case 'donasi':
 		        case 'donate':
                 if (!isUser) return reply(dpa.noregis)
+                donasih = fs.readFileSync('./src/donasi.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
-				dp.sendMessage(from, donasi(), text, {quoted: fkontak})
+                reply('cie yang mau donasi nih😗')
+donsh = `◪𝗱𝗼𝗻𝗮𝘀𝗶
+│
+├─ ❏ DANA
+├─ ❏ 085156724122
+├─ ❏ OVO
+├─ ❏ 089688543712
+├─ ❏ PULSA
+├─ ❏ 085156724122
+├─ ❏ linkAja
+├─ ❏ 085156724122
+├─ ❑ SAWERIA
+└─ ❑ https://saweria.co/EfZyN`
+                
+				dp.sendMessage(from, donasih, image, {quoted: freply, caption: donsh})
 				break
 					case 'update':
                 if (!isUser) return reply(dpa.noregis)
@@ -1582,7 +1599,7 @@ reply(`${emror}`)
 		        case 'menu':
 		          case 'listmenu': 
                if (!isUser) return reply(dpa.noregis)
-               buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+              backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan List Menu')
@@ -1590,9 +1607,10 @@ reply(`${emror}`)
  
  
 runtime = process.uptime()
-listmn = `
-
-┌── ▣ 𝙄𝙣𝙛𝙤 𝘽𝙤𝙩 ▣ ──▻▻▻
+listmn = `┌─▣ 𝙼𝙴𝙽𝚄 𝙴𝙵𝚉𝚈𝙽𝙱𝙾𝚃 ▣
+│
+│͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
+├── ▣ 𝙸𝙽𝙵𝙾 𝙱𝙾𝚃 ▣ ──▻▻▻
 ├▣ 𝙽𝚊𝚖𝚊 𝙱𝚘𝚝 :${namabot}
 ├▣ 𝙿𝚛𝚎𝚏𝚒𝚡 : All Prefix dung
 ├▣ 𝙱𝚊𝚜𝚎 : MhankBarBar
@@ -1601,11 +1619,11 @@ listmn = `
 ├▣ 𝙾𝚠𝚗𝚎𝚛 : ${namaowner}
 ├▣ 𝚃𝚘𝚝𝚊𝚕 𝚁𝚎𝚚 : ${pepolu}
 ├▣ 𝚃𝚘𝚝𝚊𝚕 𝚞𝚜𝚎𝚛 : ${user.length} ekor
-├▣ 𝙶𝚒𝚝𝚑𝚞𝚋 : https://github.com/efzyn/efzynbot.git
+├▣ 𝙶𝚒𝚝𝚑𝚞𝚋 : https://github.com/BerrRecode
 ├▣ 𝙶𝚌 𝚠𝚊 : https://cutt.ly/EfzynBoTgc
 └─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┌── ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧 ▣ ──▻▻▻
+┌── ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
 ├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
 ├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
 ├▣ 𝚁𝚘𝚕𝚎 : ${role}
@@ -1613,17 +1631,17 @@ listmn = `
 ├▣ 𝙻𝚒𝚖𝚒𝚝 : ${asu} / Day
 └─▻ ─▻ ─▻ ─▻ ─▻
 
-┌── ▣ 𝙏𝙞𝙢𝙚 ▣ ──▻▻▻
+┌── ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻▻
 ├▣ ${tampilUcapan}
 ├▣ 𝙹𝚊𝚖 : ${time}
 ├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-├──✪︎ 𝙏𝙞𝙢𝙚 𝙄𝙣𝙙𝙤 ✪︎──▻▻▻
+├──✪︎ 𝙏𝙄𝙈𝙀 𝙄𝙣𝙙𝙤 ✪︎──▻▻▻
 ├▣ 𝚆𝚒𝚋 : ${time}
 ├▣ 𝚆𝚒𝚝𝚊 : ${wita}
 ├▣ 𝚆𝚒𝚝 : ${wit}
 └─▻ ─▻ ─▻ ─▻ ─▻ ─▻
-͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
-┌「 𝙇𝙄𝙎𝙏 𝙈𝙀𝙉𝙐 ˩
+
+┌「 𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄 ˩
 ├─────────▻▻▻
 ├ ❐ ${prefix}𝚒𝚜𝚕𝚊𝚖𝚖𝚎𝚗𝚞
 ├ ❐ ${prefix}𝚒𝚗𝚏𝚘𝚖𝚎𝚗𝚞
@@ -1664,7 +1682,7 @@ listmn = `
 ├⊳ ${namaowner}
 └─▻ ─▻ ─▻ ─▻ ─▻ ─▻  `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: listmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: listmn})
                
                 break
 //==========================================BATES NGAB==========================================\\
@@ -2126,154 +2144,154 @@ listmn = `
                 case 'makermenu':
                 //case⌈❗」 by Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Maker menu')
      
 runtime = process.uptime()               
-makermenu = `
+makermenu = `┌─▣ 𝙼𝙰𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙈𝘼𝙆𝙀𝙍 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}blackpink
-┣ ❐ ${prefix}neon
-┣ ❐ ${prefix}greenneon
-┣ ❐ ${prefix}advanceglow
-┣ ❐ ${prefix}futureneon
-┣ ❐ ${prefix}sandwriting
-┣ ❐ ${prefix}sandsummer
-┣ ❐ ${prefix}sandengraved
-┣ ❐ ${prefix}metaldark
-┣ ❐ ${prefix}neonlight
-┣ ❐ ${prefix}holographic
-┣ ❐ ${prefix}text1917
-┣ ❐ ${prefix}minion
-┣ ❐ ${prefix}deluxesilver
-┣ ❐ ${prefix}newyearcard
-┣ ❐ ${prefix}bloodfrosted
-┣ ❐ ${prefix}halloween
-┣ ❐ ${prefix}jokerlogo
-┣ ❐ ${prefix}fireworksparkle
-┣ ❐ ${prefix}natureleaves
-┣ ❐ ${prefix}bokeh
-┣ ❐ ${prefix}toxic
-┣ ❐ ${prefix}strawberry
-┣ ❐ ${prefix}box3d
-┣ ❐ ${prefix}roadwarning
-┣ ❐ ${prefix}breakwall
-┣ ❐ ${prefix}icecold
-┣ ❐ ${prefix}luxury
-┣ ❐ ${prefix}cloud
-┣ ❐ ${prefix}summersand
-┣ ❐ ${prefix}horrorblood
-┣ ❐ ${prefix}thunder
-┣ ❐ ${prefix}pornhub
-┣ ❐ ${prefix}avenger
-┣ ❐ ${prefix}space
-┣ ❐ ${prefix}ninjalogo
-┣ ❐ ${prefix}marvelstudio
-┣ ❐ ${prefix}lionlogo
-┣ ❐ ${prefix}wolflogo
-┣ ❐ ${prefix}steel3d
-┣ ❐ ${prefix}wallgravity
-┣ ❐ ${prefix}shadow
-┣ ❐ ${prefix}romance
-┣ ❐ ${prefix}smoke
-┣ ❐ ${prefix}burnpaper
-┣ ❐ ${prefix}lovemessage
-┣ ❐ ${prefix}undergrass
-┣ ❐ ${prefix}coffe
-┣ ❐ ${prefix}cup
-┣ ❐ ${prefix}cup1
-┣ ❐ ${prefix}woodenboard
-┣ ❐ ${prefix}coffe
-┣ ❐ ${prefix}woodheart
-┣ ❐ ${prefix}summer3d
-┣ ❐ ${prefix}love
-┣ ❐ ${prefix}wolfmetal
-┣ ❐ ${prefix}nature3d
-┣ ❐ ${prefix}underwater
-┣ ❐ ${prefix}golderrose
-┣ ❐ ${prefix}summernature
-┣ ❐ ${prefix}letterleaves
-┣ ❐ ${prefix}glowingneon
-┣ ❐ ${prefix}fallleaves
-┣ ❐ ${prefix}flamming
-┣ ❐ ${prefix}harrypotter
-┣ ❐ ${prefix}carvedwood
-┣ ❐ ${prefix}arcade8bit
-┣ ❐ ${prefix}battlefield4
-┣ ❐ ${prefix}pubg
-┣ ❐ ${prefix}bannerlol
-┣ ❐ ${prefix}wetglass
-┣ ❐ ${prefix}multicolor3d
-┣ ❐ ${prefix}watercolor
-┣ ❐ ${prefix}luxurygold
-┣ ❐ ${prefix}galaxywallpaper
-┣ ❐ ${prefix}lighttext
-┣ ❐ ${prefix}beautifulflower
-┣ ❐ ${prefix}puppycute
-┣ ❐ ${prefix}royaltext
-┣ ❐ ${prefix}heartshaped
-┣ ❐ ${prefix}birthdaycake
-┣ ❐ ${prefix}galaxystyle
-┣ ❐ ${prefix}hologram3d
-┣ ❐ ${prefix}greenneon
-┣ ❐ ${prefix}glossychrome
-┣ ❐ ${prefix}greenbush
-┣ ❐ ${prefix}metallogo
-┣ ❐ ${prefix}noeltext
-┣ ❐ ${prefix}glittergold
-┣ ❐ ${prefix}textcake
-┣ ❐ ${prefix}starsnight
-┣ ❐ ${prefix}wooden3d
-┣ ❐ ${prefix}textbyname
-┣ ❐ ${prefix}writegalacy
-┣ ❐ ${prefix}galaxybat
-┣ ❐ ${prefix}snow3d
-┣ ❐ ${prefix}birthdayday
-┣ ❐ ${prefix}goldplaybutton
-┣ ❐ ${prefix}silverplaybutton
-┣ ❐ ${prefix}freefire
-┣ ❐ ${prefix}cartoongravity
-┣ ❐ ${prefix}anonymhacker
-┣ ❐ ${prefix}juventusshirt
-┣ ❐ ${prefix}realvintage
-┣ ❐ ${prefix}codwarzone
-┣ ❐ ${prefix}valorantbanner
-┣ ❐ ${prefix}ytkomen
-┣ ❐ ${prefix}hartatahta
-┣ ❐ ${prefix}hartacustom
-┣ ❐ ${prefix}attp
-┣ ❐ ${prefix}ttp
-┣ ❐ ${prefix}ttp2
-┣ ❐ ${prefix}ttp3
-┣ ❐ ${prefix}ttp4
-┣ ❐ ${prefix}amongus
-┣ ❐ ${prefix}carbon
-┣ ❐ ${prefix}gtapassed
-┣ ❐ ${prefix}quotemaker
-┣ ❐ ${prefix}quotemaker2
-┣ ❐ ${prefix}ohno
-┣ ❐ ${prefix}kannagen
-┣ ❐ ${prefix}changemymind
-┣ ❐ ${prefix}nulis
-┣ ❐ ${prefix}semoji
-┗━━━┫EfZyN-BoTヅ┣━━━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}blackpink
+├ ❐ ${prefix}neon
+├ ❐ ${prefix}greenneon
+├ ❐ ${prefix}advanceglow
+├ ❐ ${prefix}futureneon
+├ ❐ ${prefix}sandwriting
+├ ❐ ${prefix}sandsummer
+├ ❐ ${prefix}sandengraved
+├ ❐ ${prefix}metaldark
+├ ❐ ${prefix}neonlight
+├ ❐ ${prefix}holographic
+├ ❐ ${prefix}text1917
+├ ❐ ${prefix}minion
+├ ❐ ${prefix}deluxesilver
+├ ❐ ${prefix}newyearcard
+├ ❐ ${prefix}bloodfrosted
+├ ❐ ${prefix}halloween
+├ ❐ ${prefix}jokerlogo
+├ ❐ ${prefix}fireworksparkle
+├ ❐ ${prefix}natureleaves
+├ ❐ ${prefix}bokeh
+├ ❐ ${prefix}toxic
+├ ❐ ${prefix}strawberry
+├ ❐ ${prefix}box3d
+├ ❐ ${prefix}roadwarning
+├ ❐ ${prefix}breakwall
+├ ❐ ${prefix}icecold
+├ ❐ ${prefix}luxury
+├ ❐ ${prefix}cloud
+├ ❐ ${prefix}summersand
+├ ❐ ${prefix}horrorblood
+├ ❐ ${prefix}thunder
+├ ❐ ${prefix}pornhub
+├ ❐ ${prefix}avenger
+├ ❐ ${prefix}space
+├ ❐ ${prefix}ninjalogo
+├ ❐ ${prefix}marvelstudio
+├ ❐ ${prefix}lionlogo
+├ ❐ ${prefix}wolflogo
+├ ❐ ${prefix}steel3d
+├ ❐ ${prefix}wallgravity
+├ ❐ ${prefix}shadow
+├ ❐ ${prefix}romance
+├ ❐ ${prefix}smoke
+├ ❐ ${prefix}burnpaper
+├ ❐ ${prefix}lovemessage
+├ ❐ ${prefix}undergrass
+├ ❐ ${prefix}coffe
+├ ❐ ${prefix}cup
+├ ❐ ${prefix}cup1
+├ ❐ ${prefix}woodenboard
+├ ❐ ${prefix}coffe
+├ ❐ ${prefix}woodheart
+├ ❐ ${prefix}summer3d
+├ ❐ ${prefix}love
+├ ❐ ${prefix}wolfmetal
+├ ❐ ${prefix}nature3d
+├ ❐ ${prefix}underwater
+├ ❐ ${prefix}golderrose
+├ ❐ ${prefix}summernature
+├ ❐ ${prefix}letterleaves
+├ ❐ ${prefix}glowingneon
+├ ❐ ${prefix}fallleaves
+├ ❐ ${prefix}flamming
+├ ❐ ${prefix}harrypotter
+├ ❐ ${prefix}carvedwood
+├ ❐ ${prefix}arcade8bit
+├ ❐ ${prefix}battlefield4
+├ ❐ ${prefix}pubg
+├ ❐ ${prefix}bannerlol
+├ ❐ ${prefix}wetglass
+├ ❐ ${prefix}multicolor3d
+├ ❐ ${prefix}watercolor
+├ ❐ ${prefix}luxurygold
+├ ❐ ${prefix}galaxywallpaper
+├ ❐ ${prefix}lighttext
+├ ❐ ${prefix}beautifulflower
+├ ❐ ${prefix}puppycute
+├ ❐ ${prefix}royaltext
+├ ❐ ${prefix}heartshaped
+├ ❐ ${prefix}birthdaycake
+├ ❐ ${prefix}galaxystyle
+├ ❐ ${prefix}hologram3d
+├ ❐ ${prefix}greenneon
+├ ❐ ${prefix}glossychrome
+├ ❐ ${prefix}greenbush
+├ ❐ ${prefix}metallogo
+├ ❐ ${prefix}noeltext
+├ ❐ ${prefix}glittergold
+├ ❐ ${prefix}textcake
+├ ❐ ${prefix}starsnight
+├ ❐ ${prefix}wooden3d
+├ ❐ ${prefix}textbyname
+├ ❐ ${prefix}writegalacy
+├ ❐ ${prefix}galaxybat
+├ ❐ ${prefix}snow3d
+├ ❐ ${prefix}birthdayday
+├ ❐ ${prefix}goldplaybutton
+├ ❐ ${prefix}silverplaybutton
+├ ❐ ${prefix}freefire
+├ ❐ ${prefix}cartoongravity
+├ ❐ ${prefix}anonymhacker
+├ ❐ ${prefix}juventusshirt
+├ ❐ ${prefix}realvintage
+├ ❐ ${prefix}codwarzone
+├ ❐ ${prefix}valorantbanner
+├ ❐ ${prefix}ytkomen
+├ ❐ ${prefix}hartatahta
+├ ❐ ${prefix}hartacustom
+├ ❐ ${prefix}attp
+├ ❐ ${prefix}ttp
+├ ❐ ${prefix}ttp2
+├ ❐ ${prefix}ttp3
+├ ❐ ${prefix}ttp4
+├ ❐ ${prefix}amongus
+├ ❐ ${prefix}carbon
+├ ❐ ${prefix}gtapassed
+├ ❐ ${prefix}quotemaker
+├ ❐ ${prefix}quotemaker2
+├ ❐ ${prefix}ohno
+├ ❐ ${prefix}kannagen
+├ ❐ ${prefix}changemymind
+├ ❐ ${prefix}nulis
+├ ❐ ${prefix}semoji
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -2281,7 +2299,7 @@ makermenu = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info  `
 
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: makermenu})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: makermenu})
                 
                 break
                 
@@ -2555,49 +2573,49 @@ makermenu = `
 case 'searchmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Searching Menu')
                
 runtime = process.uptime()               
-srch = `
+srch = `┌─▣ 𝚂𝙴𝙰𝚁𝙲𝙷𝙸𝙽𝙶 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙎𝙀𝘼𝙍𝘾𝙃𝙄𝙉𝙂 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}playstore
-┣ ❐ ${prefix}pinterest
-┣ ❐ ${prefix}pinterest2
-┣ ❐ ${prefix}image
-┣ ❐ ${prefix}jooxsearch
-┣ ❐ ${prefix}cersexsearch
-┣ ❐ ${prefix}gsmarena
-┣ ❐ ${prefix}resepmakanan
-┣ ❐ ${prefix}wikipedia
-┣ ❐ ${prefix}jooxsearch
-┣ ❐ ${prefix}brainly
-┣ ❐ ${prefix}shopee
-┣ ❐ ${prefix}jalantikus
-┣ ❐ ${prefix}muihalal
-┣ ❐ ${prefix}thelazy
-┣ ❐ ${prefix}wattpad
-┣ ❐ ${prefix}rexdl
-┣ ❐ ${prefix}moddroid
-┣ ❐ ${prefix}sfile
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}playstore
+├ ❐ ${prefix}pinterest
+├ ❐ ${prefix}pinterest2
+├ ❐ ${prefix}image
+├ ❐ ${prefix}jooxsearch
+├ ❐ ${prefix}cersexsearch
+├ ❐ ${prefix}gsmarena
+├ ❐ ${prefix}resepmakanan
+├ ❐ ${prefix}wikipedia
+├ ❐ ${prefix}jooxsearch
+├ ❐ ${prefix}brainly
+├ ❐ ${prefix}shopee
+├ ❐ ${prefix}jalantikus
+├ ❐ ${prefix}muihalal
+├ ❐ ${prefix}thelazy
+├ ❐ ${prefix}wattpad
+├ ❐ ${prefix}rexdl
+├ ❐ ${prefix}moddroid
+├ ❐ ${prefix}sfile
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -2606,7 +2624,7 @@ srch = `
 
 
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: srch})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: srch})
                 break
 				
 				
@@ -2700,36 +2718,36 @@ srch = `
 case 'beritamenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Berita Menu')
                
 runtime = process.uptime()               
-beritamn = `
+beritamn = `┌─▣ 𝙱𝙴𝚁𝙸𝚃𝙰 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝘽𝙀𝙍𝙄𝙏𝘼 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}sindo (internasional)
-┣ ❐ ${prefix}sindo2 (nasional)
-┣ ❐ ${prefix}okezone
-┣ ❐ ${prefix}kompastv
-┣ ❐ ${prefix}bbcnews
-┣ ❐ ${prefix}beritanews
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}sindo
+├ ❐ ${prefix}sindo2
+├ ❐ ${prefix}okezone
+├ ❐ ${prefix}kompastv
+├ ❐ ${prefix}bbcnews
+├ ❐ ${prefix}beritanews
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -2737,7 +2755,7 @@ beritamn = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: beritamn})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: beritamn})
                 break
 				
 				
@@ -2927,29 +2945,29 @@ beritamn = `
 		        case 'islammenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Islam Menu')
 
                
 runtime = process.uptime()               
-islmmn = `
-               
-┌─ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ──▻▻▻
+islmmn = `┌─▣ 𝙸𝚂𝙻𝙰𝙼 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
 ├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
 ├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
 ├▣ 𝚁𝚘𝚕𝚎 : ${role}
 ├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
 └─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┌─ ▣ 𝙏𝙞𝙢𝙚 ▣ ──▻▻
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
 ├▣ ${tampilUcapan}
 ├▣ 𝙹𝚊𝚖 : ${time}
 ├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
 └─▻ ─▻ ─▻ ─▻ ─▻
 
-┌「 𝙄𝙎𝙇𝘼𝙈 𝙈𝙀𝙉𝙐 ˩
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
 ├───────▻▻▻
 ├ ❐ ${prefix}listquran 
 ├ ❐ ${prefix}quran
@@ -2969,7 +2987,7 @@ islmmn = `
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: islmmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: islmmn})
                 break
 				
 //==========================================BATES NGAB==========================================\\
@@ -3088,41 +3106,41 @@ break
 case 'soundmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Sound Menu')
                
 runtime = process.uptime()               
-sndmenu = `
+sndmenu = `┌─▣ 𝚂𝙾𝚄𝙽𝙳 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙎𝙊𝙐𝙉𝘿 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}sound
-┣ ❐ ${prefix}sound1
-┣ ❐ ${prefix}sound2
-┣ ❐ ${prefix}sound3
-┣ ❐ ${prefix}sound4
-┣ ❐ ${prefix}sound5
-┣ ❐ ${prefix}sound6
-┣ ❐ ${prefix}sound7
-┣ ❐ ${prefix}sound8
-┣ ❐ ${prefix}sound9
-┣ ❐ ${prefix}sound10
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}sound
+├ ❐ ${prefix}sound1
+├ ❐ ${prefix}sound2
+├ ❐ ${prefix}sound3
+├ ❐ ${prefix}sound4
+├ ❐ ${prefix}sound5
+├ ❐ ${prefix}sound6
+├ ❐ ${prefix}sound7
+├ ❐ ${prefix}sound8
+├ ❐ ${prefix}sound9
+├ ❐ ${prefix}sound10
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -3130,7 +3148,7 @@ sndmenu = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: sndmenu})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: sndmenu})
                 break
 
 
@@ -3782,94 +3800,94 @@ sndmenu = `
 case 'animemenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan anime Menu')
                
 runtime = process.uptime()               
-animemn = `
+animemn = `─▣ 𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝘼𝙉𝙄𝙈𝙀 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}dewabatch
-┣ ❐ ${prefix}kusonime <anime>
-┣ ❐ ${prefix}randomnekonime
-┣ ❐ ${prefix}randomanime
-┣ ❐ ${prefix}randomwaifu
-┣ ❐ ${prefix}animesaran
-┣ ❐ ${prefix}animesaran2
-┣ ❐ ${prefix}storyanime
-┣ ❐ ${prefix}wait
-┣ ❐ ${prefix}fuutarou
-┣ ❐ ${prefix}itsuki
-┣ ❐ ${prefix}miku
-┣ ❐ ${prefix}nino
-┣ ❐ ${prefix}yotsuba
-┣ ❐ ${prefix}ichika
-┣ ❐ ${prefix}tanjiro
-┣ ❐ ${prefix}nezuko
-┣ ❐ ${prefix}zenitsu
-┣ ❐ ${prefix}giyu
-┣ ❐ ${prefix}sakonji
-┣ ❐ ${prefix}inosuke
-┣ ❐ ${prefix}shinobu
-┣ ❐ ${prefix}kanao
-┣ ❐ ${prefix}sayu
-┣ ❐ ${prefix}yoshida
-┣ ❐ ${prefix}airi
-┣ ❐ ${prefix}asami
-┣ ❐ ${prefix}hashimoto
-┣ ❐ ${prefix}yuzuha
-┣ ❐ ${prefix}eren
-┣ ❐ ${prefix}mikasa
-┣ ❐ ${prefix}armin
-┣ ❐ ${prefix}levi
-┣ ❐ ${prefix}bertholdt
-┣ ❐ ${prefix}erwin
-┣ ❐ ${prefix}reiner
-┣ ❐ ${prefix}annie
-┣ ❐ ${prefix}hanji
-┣ ❐ ${prefix}jean
-┣ ❐ ${prefix}connie
-┣ ❐ ${prefix}historia
-┣ ❐ ${prefix}sasha
-┣ ❐ ${prefix}grisha
-┣ ❐ ${prefix}pixis
-┣ ❐ ${prefix}frieda
-┣ ❐ ${prefix}carla
-┣ ❐ ${prefix}marco
-┣ ❐ ${prefix}ymir
-┣ ❐ ${prefix}floch
-┣ ❐ ${prefix}anka
-┣ ❐ ${prefix}eld
-┣ ❐ ${prefix}rico
-┣ ❐ ${prefix}petra
-┣ ❐ ${prefix}ai
-┣ ❐ ${prefix}momoe
-┣ ❐ ${prefix}neirul
-┣ ❐ ${prefix}rika
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}dewabatch
+├ ❐ ${prefix}kusonime
+├ ❐ ${prefix}randomnekonime
+├ ❐ ${prefix}randomanime
+├ ❐ ${prefix}randomwaifu
+├ ❐ ${prefix}animesaran
+├ ❐ ${prefix}animesaran2
+├ ❐ ${prefix}storyanime
+├ ❐ ${prefix}wait
+├ ❐ ${prefix}fuutarou
+├ ❐ ${prefix}itsuki
+├ ❐ ${prefix}miku
+├ ❐ ${prefix}nino
+├ ❐ ${prefix}yotsuba
+├ ❐ ${prefix}ichika
+├ ❐ ${prefix}tanjiro
+├ ❐ ${prefix}nezuko
+├ ❐ ${prefix}zenitsu
+├ ❐ ${prefix}giyu
+├ ❐ ${prefix}sakonji
+├ ❐ ${prefix}inosuke
+├ ❐ ${prefix}shinobu
+├ ❐ ${prefix}kanao
+├ ❐ ${prefix}sayu
+├ ❐ ${prefix}yoshida
+├ ❐ ${prefix}airi
+├ ❐ ${prefix}asami
+├ ❐ ${prefix}hashimoto
+├ ❐ ${prefix}yuzuha
+├ ❐ ${prefix}eren
+├ ❐ ${prefix}mikasa
+├ ❐ ${prefix}armin
+├ ❐ ${prefix}levi
+├ ❐ ${prefix}bertholdt
+├ ❐ ${prefix}erwin
+├ ❐ ${prefix}reiner
+├ ❐ ${prefix}annie
+├ ❐ ${prefix}hanji
+├ ❐ ${prefix}jean
+├ ❐ ${prefix}connie
+├ ❐ ${prefix}historia
+├ ❐ ${prefix}sasha
+├ ❐ ${prefix}grisha
+├ ❐ ${prefix}pixis
+├ ❐ ${prefix}frieda
+├ ❐ ${prefix}carla
+├ ❐ ${prefix}marco
+├ ❐ ${prefix}ymir
+├ ❐ ${prefix}floch
+├ ❐ ${prefix}anka
+├ ❐ ${prefix}eld
+├ ❐ ${prefix}rico
+├ ❐ ${prefix}petra
+├ ❐ ${prefix}ai
+├ ❐ ${prefix}momoe
+├ ❐ ${prefix}neirul
+├ ❐ ${prefix}rika
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: animemn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: animemn})
                 break
 				
 //==========================================BATES NGAB==========================================\\
@@ -3906,44 +3924,44 @@ animemn = `
 				case 'asupanmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan asupan Menu')
                
 runtime = process.uptime()               
-aspnmn = `
+aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝘼𝙎𝙐𝙋𝘼𝙉 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}asupan
-┣ ❐ ${prefix}asupan2
-┣ ❐ ${prefix}asupansantuy
-┣ ❐ ${prefix}asupanbocil
-┣ ❐ ${prefix}asupanukhty
-┣ ❐ ${prefix}asupanrikagusriani
-┣ ❐ ${prefix}asupanghea
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}asupan
+├ ❐ ${prefix}asupan2
+├ ❐ ${prefix}asupansantuy
+├ ❐ ${prefix}asupanbocil
+├ ❐ ${prefix}asupanukhty
+├ ❐ ${prefix}asupanrikagusriani
+├ ❐ ${prefix}asupanghea
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: aspnmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: aspnmn})
                 break
                 
 //==========================================BATES NGAB==========================================\\
@@ -4059,44 +4077,44 @@ aspnmn = `
                 case 'stalkermenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan stalk Menu')
                
 runtime = process.uptime()               
-stalkmn = `
+stalkmn = `┌─▣ 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙎𝙏𝘼𝙇𝙆𝙀𝙍 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}ytstalk
-┣ ❐ ${prefix}pptiktok
-┣ ❐ ${prefix}igstalk
-┣ ❐ ${prefix}githubstalk
-┣ ❐ ${prefix}tiktokstalk
-┣ ❐ ${prefix}mlstalk
-┣ ❐ ${prefix}ffstalk
-┗━━┫EfZyN-BoTヅ┣━━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}ytstalk
+├ ❐ ${prefix}pptiktok
+├ ❐ ${prefix}igstalk
+├ ❐ ${prefix}githubstalk
+├ ❐ ${prefix}tiktokstalk
+├ ❐ ${prefix}mlstalk
+├ ❐ ${prefix}ffstalk
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: stalkmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: stalkmn})
                 break
                 
                 
@@ -4354,51 +4372,50 @@ stalkmn = `
                 case 'downloadmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan download Menu')
                
 runtime = process.uptime()               
-downmenu = `
+downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}tiktoknowm
-┣ ❐ ${prefix}tiktokdownload
-┣ ❐ ${prefix}ytplay
-┣ ❐ ${prefix}ytplay2
-┣ ❐ ${prefix}ytmp3
-┣ ❐ ${prefix}ytmp3v2
-┣ ❐ ${prefix}ytmp3v3
-┣ ❐ ${prefix}ytmp4
-┣ ❐ ${prefix}ytmp4v2
-┣ ❐ ${prefix}ytmp3v3
-┣ ❐ ${prefix}igdownload
-┣ ❐ ${prefix}igstory (develop)
-┣ ❐ ${prefix}igvideo
-┣ ❐ ${prefix}igphoto
-┗━━┫EfZyN-BoTヅ┣━━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}tiktoknowm
+├ ❐ ${prefix}tiktokdownload
+├ ❐ ${prefix}ytplay
+├ ❐ ${prefix}ytplay2
+├ ❐ ${prefix}ytmp3
+├ ❐ ${prefix}ytmp3v2
+├ ❐ ${prefix}ytmp3v3
+├ ❐ ${prefix}ytmp4
+├ ❐ ${prefix}ytmp4v2
+├ ❐ ${prefix}igdownload
+├ ❐ ${prefix}igstory (develop)
+├ ❐ ${prefix}igvideo
+├ ❐ ${prefix}igphoto
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: downmenu})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: downmenu})
                 break
 //==========================================BATES NGAB==========================================\\
 //NSFW MENU
@@ -4528,88 +4545,90 @@ downmenu = `
 case 'nsfwmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan nsfw Menu')
                
 runtime = process.uptime()               
-nsfwmn = `
+nsfwmn = `┌─▣ 𝙽𝚂𝙵𝚆 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙉𝙎𝙁𝙒 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}lewdk
-┣ ❐ ${prefix}erok
-┣ ❐ ${prefix}tits
-┣ ❐ ${prefix}keta
-┣ ❐ ${prefix}solo
-┣ ❐ ${prefix}eron
-┣ ❐ ${prefix}lewd
-┣ ❐ ${prefix}trap
-┣ ❐ ${prefix}yuri
-┣ ❐ ${prefix}ero
-┣ ❐ ${prefix}holoero
-┣ ❐ ${prefix}erofeet
-┣ ❐ ${prefix}blowjob
-┣ ❐ ${prefix}cum_jpg
-┣ ❐ ${prefix}eroyuri
-┣ ❐ ${prefix}hentai
-┣ ❐ ${prefix}femdom
-┣ ❐ ${prefix}nsfw_avatar
-┣ ❐ ${prefix}kemonomimi
-┣ ❐ ${prefix}pussy_jpg
-┣ ❐ ${prefix}lewdkemo
-┣ ❐ ${prefix}hololewd
-┣ ❐ ${prefix}futanari
-┣ ❐ ${prefix}hololewd
-┣ ❐ ${prefix}hentai4everyone
-┣ ❐ ${prefix}animebellybutton
-┣ ❐ ${prefix}biganimetiddies
-┣ ❐ ${prefix}lewdanimegirls
-┣ ❐ ${prefix}hentaifemdom
-┣ ❐ ${prefix}animearmpits
-┣ ❐ ${prefix}hentaiparadise
-┣ ❐ ${prefix}animethighss
-┣ ❐ ${prefix}animebooty
-┣ ❐ ${prefix}animefeets
-┣ ❐ ${prefix}sideoppai
-┣ ❐ ${prefix}hololewd
-┣ ❐ ${prefix}ahegao
-┣ ❐ ${prefix}ecchi
-┣ ❐ ${prefix}yaoi
-┣ ❐ ${prefix}trap
-┣ ❐ ${prefix}chiisaihentai
-┣ ❐ ${prefix}loli
-┣ ❐ ${prefix}waifu
-┣ ❐ ${prefix}neko
-┣ ❐ ${prefix}hentai2
-┣ ❐ ${prefix}feetg
-┣ ❐ ${prefix}solog
-┣ ❐ ${prefix}kuni
-┣ ❐ ${prefix}anal
-┣ ❐ ${prefix}cum
-┣ ❐ ${prefix}bj
-┣ ❐ ${prefix}classic
-┣ ❐ ${prefix}erokemo
-┣ ❐ ${prefix}cuddle
-┣ ❐ ${prefix}pussy
-┣ ❐ ${prefix}random_hentai_gif
-┣ ❐ ${prefix}nsfw_neko_gif
-┣ ❐ ${prefix}blowjobgif
-┗━┫EfZyN-BoTヅ┣━━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}lewdk
+├ ❐ ${prefix}erok
+├ ❐ ${prefix}tits
+├ ❐ ${prefix}keta
+├ ❐ ${prefix}solo
+├ ❐ ${prefix}eron
+├ ❐ ${prefix}lewd
+├ ❐ ${prefix}trap
+├ ❐ ${prefix}yuri
+├ ❐ ${prefix}ero
+├ ❐ ${prefix}holoero
+├ ❐ ${prefix}erofeet
+├ ❐ ${prefix}blowjob
+├ ❐ ${prefix}cum_jpg
+├ ❐ ${prefix}eroyuri
+├ ❐ ${prefix}hentai
+├ ❐ ${prefix}femdom
+├ ❐ ${prefix}nsfw_avatar
+├ ❐ ${prefix}kemonomimi
+├ ❐ ${prefix}pussy_jpg
+├ ❐ ${prefix}lewdkemo
+├ ❐ ${prefix}hololewd
+├ ❐ ${prefix}futanari
+├ ❐ ${prefix}hololewd
+├ ❐ ${prefix}hentai4everyone
+├ ❐ ${prefix}animebellybutton
+├ ❐ ${prefix}biganimetiddies
+├ ❐ ${prefix}lewdanimegirls
+├ ❐ ${prefix}hentaifemdom
+├ ❐ ${prefix}animearmpits
+├ ❐ ${prefix}hentaiparadise
+├ ❐ ${prefix}animearmpits
+├ ❐ ${prefix}hentaiparadise
+├ ❐ ${prefix}animethighss
+├ ❐ ${prefix}animebooty
+├ ❐ ${prefix}animefeets
+├ ❐ ${prefix}sideoppai
+├ ❐ ${prefix}hololewd
+├ ❐ ${prefix}ahegao
+├ ❐ ${prefix}ecchi
+├ ❐ ${prefix}yaoi
+├ ❐ ${prefix}trap
+├ ❐ ${prefix}chiisaihentai
+├ ❐ ${prefix}loli
+├ ❐ ${prefix}waifu
+├ ❐ ${prefix}neko
+├ ❐ ${prefix}hentai2
+├ ❐ ${prefix}feetg
+├ ❐ ${prefix}solog
+├ ❐ ${prefix}kuni
+├ ❐ ${prefix}anal
+├ ❐ ${prefix}cum
+├ ❐ ${prefix}bj
+├ ❐ ${prefix}classic
+├ ❐ ${prefix}erokemo
+├ ❐ ${prefix}cuddle
+├ ❐ ${prefix}pussy
+├ ❐ ${prefix}random_hentai_gif
+├ ❐ ${prefix}nsfw_neko_gif
+├ ❐ ${prefix}blowjobgif
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -4618,7 +4637,7 @@ nsfwmn = `
 
 
                 efzyen = fs.readFileSync('./suara/dila.mp3')
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: nsfwmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: nsfwmn})
                 dp.sendMessage(from, efzyen, MessageType.audio,{quoted: freply, mimetype: 'audio/mp4', ptt:true})
                 
                 break
@@ -4684,34 +4703,34 @@ nsfwmn = `
 case 'mtkmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Matematika Menu')
                
 runtime = process.uptime()               
-mtkmn = `
+mtkmn = `┌─▣ 𝙼𝙰𝚃𝙴𝙼𝙰𝚃𝙸𝙺𝙰 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙈𝘼𝙏𝙀𝙈𝘼𝙏𝙄𝙆𝘼 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}perkalian
-┣ ❐ ${prefix}rumuspersegipanjang
-┣ ❐ ${prefix}rumuspersegi
-┣ ❐ ${prefix}kuadrat
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}perkalian
+├ ❐ ${prefix}rumuspersegipanjang
+├ ❐ ${prefix}rumuspersegi
+├ ❐ ${prefix}kuadrat
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *NB* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *NB* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -4719,7 +4738,7 @@ mtkmn = `
 ❒ *NB* : Info Bot ketik ${prefix}info `
 
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: mtkmn})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: mtkmn})
                 break
                 
                 
@@ -4966,97 +4985,97 @@ break
 case 'imgeditmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan image edit Menu')
                
 runtime = process.uptime()               
-imgedt = `
+imgedt = `┌─▣ 𝙸𝙼𝙶 𝙴𝙳𝙸𝚃 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙄𝙈𝘼𝙂𝙀 𝙀𝘿𝙄𝙏 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}imagecolor
-┣ ❐ ${prefix}imagerotate
-┣ ❐ ${prefix}memegen
-┣ ❐ ${prefix}triggered
-┣ ❐ ${prefix}fisheye
-┣ ❐ ${prefix}skullmask
-┣ ❐ ${prefix}alien
-┣ ❐ ${prefix}tosmile
-┣ ❐ ${prefix}cartoon
-┣ ❐ ${prefix}invert
-┣ ❐ ${prefix}pixelate
-┣ ❐ ${prefix}flip
-┣ ❐ ${prefix}grayscale
-┣ ❐ ${prefix}roundimage
-┣ ❐ ${prefix}pencil
-┣ ❐ ${prefix}wasted
-┣ ❐ ${prefix}deepfryt
-┣ ❐ ${prefix}removebg
-┣ ❐ ${prefix}upscale
-┣ ❐ ${prefix}1977
-┣ ❐ ${prefix}aden
-┣ ❐ ${prefix}brannan
-┣ ❐ ${prefix}brooklyn
-┣ ❐ ${prefix}clarendon
-┣ ❐ ${prefix}gingham
-┣ ❐ ${prefix}hudson
-┣ ❐ ${prefix}inkwell
-┣ ❐ ${prefix}earlybird
-┣ ❐ ${prefix}kelvin
-┣ ❐ ${prefix}lark
-┣ ❐ ${prefix}lofi
-┣ ❐ ${prefix}maven
-┣ ❐ ${prefix}mayfair
-┣ ❐ ${prefix}moon
-┣ ❐ ${prefix}nashville
-┣ ❐ ${prefix}perpetua
-┣ ❐ ${prefix}reyes
-┣ ❐ ${prefix}rise
-┣ ❐ ${prefix}slumber
-┣ ❐ ${prefix}stinson
-┣ ❐ ${prefix}toaster
-┣ ❐ ${prefix}valencia
-┣ ❐ ${prefix}walden
-┣ ❐ ${prefix}willow
-┣ ❐ ${prefix}xpro2
-┣ ❐ ${prefix}affect
-┣ ❐ ${prefix}beautiful
-┣ ❐ ${prefix}facepalm
-┣ ❐ ${prefix}hitler
-┣ ❐ ${prefix}jail
-┣ ❐ ${prefix}rainbow
-┣ ❐ ${prefix}rip
-┣ ❐ ${prefix}sepia
-┣ ❐ ${prefix}trash
-┣ ❐ ${prefix}wanted
-┣ ❐ ${prefix}jokeoverhead
-┣ ❐ ${prefix}bed
-┣ ❐ ${prefix}slap
-┣ ❐ ${prefix}spank
-┣ ❐ ${prefix}kiss
-┗━━┫EfZyN-BoTヅ┣━━⊳ 
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}imagecolor
+├ ❐ ${prefix}imagerotate
+├ ❐ ${prefix}memegen
+├ ❐ ${prefix}triggered
+├ ❐ ${prefix}fisheye
+├ ❐ ${prefix}skullmask
+├ ❐ ${prefix}alien
+├ ❐ ${prefix}tosmile
+├ ❐ ${prefix}cartoon
+├ ❐ ${prefix}invert
+├ ❐ ${prefix}pixelate
+├ ❐ ${prefix}flip
+├ ❐ ${prefix}grayscale
+├ ❐ ${prefix}roundimage
+├ ❐ ${prefix}pencil
+├ ❐ ${prefix}wasted
+├ ❐ ${prefix}deepfryt
+├ ❐ ${prefix}removebg
+├ ❐ ${prefix}upscale
+├ ❐ ${prefix}1977
+├ ❐ ${prefix}aden
+├ ❐ ${prefix}brannan
+├ ❐ ${prefix}brooklyn
+├ ❐ ${prefix}clarendon
+├ ❐ ${prefix}gingham
+├ ❐ ${prefix}hudson
+├ ❐ ${prefix}inkwell
+├ ❐ ${prefix}earlybird
+├ ❐ ${prefix}kelvin
+├ ❐ ${prefix}lark
+├ ❐ ${prefix}lofi
+├ ❐ ${prefix}maven
+├ ❐ ${prefix}mayfair
+├ ❐ ${prefix}moon
+├ ❐ ${prefix}nashville
+├ ❐ ${prefix}perpetua
+├ ❐ ${prefix}reyes
+├ ❐ ${prefix}rise
+├ ❐ ${prefix}slumber
+├ ❐ ${prefix}stinson
+├ ❐ ${prefix}toaster
+├ ❐ ${prefix}valencia
+├ ❐ ${prefix}walden
+├ ❐ ${prefix}willow
+├ ❐ ${prefix}xpro2
+├ ❐ ${prefix}affect
+├ ❐ ${prefix}beautiful
+├ ❐ ${prefix}facepalm
+├ ❐ ${prefix}hitler
+├ ❐ ${prefix}jail
+├ ❐ ${prefix}rainbow
+├ ❐ ${prefix}rip
+├ ❐ ${prefix}sepia
+├ ❐ ${prefix}trash
+├ ❐ ${prefix}wanted
+├ ❐ ${prefix}jokeoverhead
+├ ❐ ${prefix}bed
+├ ❐ ${prefix}slap
+├ ❐ ${prefix}spank
+├ ❐ ${prefix}kiss
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: imgedt})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: imgedt})
                 break
 
 //==========================================BATES NGAB==========================================\\
@@ -5147,35 +5166,35 @@ imgedt = `
 				case 'moviemenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Movie Menu')
                
 runtime = process.uptime()               
-moviemn = `
+moviemn = `┌─▣ 𝙼𝙾𝚅𝙸𝙴 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙈𝙊𝙑𝙄𝙀 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}searchfilm
-┣ ❐ ${prefix}filmapikterbaru
-┣ ❐ ${prefix}filmapikdrama
-┣ ❐ ${prefix}lk21
-┣ ❐ ${prefix}jadwalbioskop
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}searchfilm
+├ ❐ ${prefix}filmapikterbaru
+├ ❐ ${prefix}filmapikdrama
+├ ❐ ${prefix}lk21
+├ ❐ ${prefix}jadwalbioskop
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -5183,7 +5202,7 @@ moviemn = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: moviemn})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: moviemn})
                 break
 				
 				
@@ -5311,7 +5330,7 @@ moviemn = `
   ├─ ❏ WhatsApp
   ├─ ❏ 085156724122
   ├─ ❏ Github
-  ├─ ❏ https://github.com/efzyn
+  ├─ ❏ https://github.com/BerrRecode
   ├─ ❏ Instagram
   └─ ❏ https://www.instagram.com/efzyn_`
 				dp.sendMessage(from, buffer, image, {quoted: freply, caption: infownr})
@@ -5335,9 +5354,9 @@ esceh = `
 │
 └──┤Link Github├────❥
   ├✜ Github Efzyn
-  ├✜ https://github.com/efzyn
+  ├✜ https://github.com/BerrRecode
   ├✜ Github SC bot
-  ├✜ https://github.com/efzyn/efzynbot.git
+  ├✜ https://github.com/BerrRecode/efzynbot.git
   └───────────────────⊳⊳⊳ `
                        dp.sendMessage(from, buffer, image, {quoted: freply, caption: esceh})
                 break
@@ -5354,47 +5373,48 @@ esceh = `
                 case 'infomenu':
                 //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Information Menu')
                
 runtime = process.uptime()               
-infoomenu = `
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+infoomenu = `┌─▣ 𝙸𝙽𝙵𝙾 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏「 𝙄𝙉𝙁𝙊 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}info
-┣ ❐ ${prefix}infoowner
-┣ ❐ ${prefix}infosc
-┣ ❐ ${prefix}runtime
-┣ ❐ ${prefix}update
-┣ ❐ ${prefix}covidglobal 
-┣ ❐ ${prefix}covidindo
-┣ ❐ ${prefix}jadwaltv
-┣ ❐ ${prefix}infocuaca
-┣ ❐ ${prefix}infotsunami
-┣ ❐ ${prefix}infogempa
-┗━━┫EfZyN-BoTヅ┣━━⊳ 
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
+├───────▻▻▻
+├ ❐ ${prefix}info
+├ ❐ ${prefix}infoowner
+├ ❐ ${prefix}infosc
+├ ❐ ${prefix}runtime
+├ ❐ ${prefix}update
+├ ❐ ${prefix}covidglobal
+├ ❐ ${prefix}covidindo
+├ ❐ ${prefix}jadwaltv
+├ ❐ ${prefix}infocuaca
+├ ❐ ${prefix}infotsunami
+├ ❐ ${prefix}infogempa
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: infoomenu})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: infoomenu})
                 break
                 
 //==========================================BATES NGAB==========================================\\
@@ -5825,59 +5845,59 @@ infoomenu = `
 case 'funmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Fun Menu')
                
 runtime = process.uptime()               
-funmn = `
+funmn = `┌─▣ 𝙵𝚄𝙽 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙁𝙐𝙉 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}tts
-┣ ❐ ${prefix}tts2
-┣ ❐ ${prefix}slot
-┣ ❐ ${prefix}dadu
-┣ ❐ ${prefix}caklontong
-┣ ❐ ${prefix}family100
-┣ ❐ ${prefix}translate
-┣ ❐ ${prefix}tebakkata
-┣ ❐ ${prefix}tebakgambar
-┣ ❐ ${prefix}tebakgambar2
-┣ ❐ ${prefix}artinama
-┣ ❐ ${prefix}truth
-┣ ❐ ${prefix}dare
-┣ ❐ ${prefix}bisakah
-┣ ❐ ${prefix}kapankah
-┣ ❐ ${prefix}apakah
-┣ ❐ ${prefix}bagaimanakah
-┣ ❐ ${prefix}rate
-┣ ❐ ${prefix}sangecek
-┣ ❐ ${prefix}gaycek
-┣ ❐ ${prefix}lesbicek
-┣ ❐ ${prefix}gantengcek
-┣ ❐ ${prefix}cantikcek
-┣ ❐ ${prefix}watak
-┣ ❐ ${prefix}hobby
-┣ ❐ ${prefix}jadian
-┣ ❐ ${prefix}ngewe
-┣ ❐ ${prefix}terganteng
-┣ ❐ ${prefix}tercantik
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}tts
+├ ❐ ${prefix}tts2
+├ ❐ ${prefix}slot
+├ ❐ ${prefix}dadu
+├ ❐ ${prefix}caklontong
+├ ❐ ${prefix}family100
+├ ❐ ${prefix}translate
+├ ❐ ${prefix}tebakkata
+├ ❐ ${prefix}tebakgambar
+├ ❐ ${prefix}tebakgambar2
+├ ❐ ${prefix}artinama
+├ ❐ ${prefix}truth
+├ ❐ ${prefix}dare
+├ ❐ ${prefix}bisakah
+├ ❐ ${prefix}kapankah
+├ ❐ ${prefix}apakah
+├ ❐ ${prefix}bagaimanakah
+├ ❐ ${prefix}rate
+├ ❐ ${prefix}sangecek
+├ ❐ ${prefix}gaycek
+├ ❐ ${prefix}lesbicek
+├ ❐ ${prefix}gantengcek
+├ ❐ ${prefix}cantikcek
+├ ❐ ${prefix}watak
+├ ❐ ${prefix}hobby
+├ ❐ ${prefix}jadian
+├ ❐ ${prefix}ngewe
+├ ❐ ${prefix}terganteng
+├ ❐ ${prefix}tercantik
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -5885,7 +5905,7 @@ funmn = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: funmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: funmn})
                 break
 				
 				
@@ -6067,50 +6087,50 @@ funmn = `
 case 'toolsmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Tools Menu')
                
 runtime = process.uptime()               
-tlsmenu = `
+tlsmenu = `┌─▣ 𝚃𝙾𝙾𝙻𝚂 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙏𝙊𝙊𝙇𝙎 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}base64encode
-┣ ❐ ${prefix}base64decode
-┣ ❐ ${prefix}base32hexencode
-┣ ❐ ${prefix}base32hexdecode
-┣ ❐ ${prefix}binaryencode
-┣ ❐ ${prefix}binarydecode
-┣ ❐ ${prefix}octalencode
-┣ ❐ ${prefix}octaldecode
-┣ ❐ ${prefix}hexencode
-┣ ❐ ${prefix}hexdecode
-┣ ❐ ${prefix}shortlink
-┣ ❐ ${prefix}shortlink2
-┣ ❐ ${prefix}shortlink3
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
+├───────▻▻▻
+├ ❐ ${prefix}base64encode
+├ ❐ ${prefix}base64decode
+├ ❐ ${prefix}base32hexencode
+├ ❐ ${prefix}base32hexdecode
+├ ❐ ${prefix}binaryencode
+├ ❐ ${prefix}binarydecode
+├ ❐ ${prefix}octalencode
+├ ❐ ${prefix}octaldecode
+├ ❐ ${prefix}hexencode
+├ ❐ ${prefix}hexdecode
+├ ❐ ${prefix}shortlink
+├ ❐ ${prefix}shortlink2
+├ ❐ ${prefix}shortlink3
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: tlsmenu})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: tlsmenu})
                 break
 				
 //==========================================BATES NGAB==========================================\\
@@ -6312,54 +6332,54 @@ tlsmenu = `
 case 'mediamenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Media Menu')
                
 runtime = process.uptime()               
-medimenu = `
+medimenu = `┌─▣ 𝙼𝙴𝙳𝙸𝙰 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙈𝙚𝙙𝙞𝙖 𝙈𝙚𝙣𝙪 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}spamsms
-┣ ❐ ${prefix}nickff
-┣ ❐ ${prefix}ceritahoror
-┣ ❐ ${prefix}ceritapendek
-┣ ❐ ${prefix}quotes
-┣ ❐ ${prefix}cersex
-┣ ❐ ${prefix}quotesdilan
-┣ ❐ ${prefix}faktaunik
-┣ ❐ ${prefix}katakatabijak
-┣ ❐ ${prefix}randompantun
-┣ ❐ ${prefix}randombucin
-┣ ❐ ${prefix}katakatabucin
-┣ ❐ ${prefix}memeindo
-┣ ❐ ${prefix}darkjoke
-┣ ❐ ${prefix}estetik
-┣ ❐ ${prefix}ppcouple
-┣ ❐ ${prefix}randomnama
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 」
+├───────▻▻▻
+├ ❐ ${prefix}spamsms
+├ ❐ ${prefix}nickff
+├ ❐ ${prefix}ceritahoror
+├ ❐ ${prefix}ceritapendek
+├ ❐ ${prefix}quotes
+├ ❐ ${prefix}cersex
+├ ❐ ${prefix}quotesdilan
+├ ❐ ${prefix}faktaunik
+├ ❐ ${prefix}katakatabijak
+├ ❐ ${prefix}randompantun
+├ ❐ ${prefix}randombucin
+├ ❐ ${prefix}katakatabucin
+├ ❐ ${prefix}memeindo
+├ ❐ ${prefix}darkjoke
+├ ❐ ${prefix}estetik
+├ ❐ ${prefix}ppcouple
+├ ❐ ${prefix}randomnama
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: medimenu})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: medimenu})
                 break
 				
 				
@@ -6789,47 +6809,48 @@ medimenu = `
                 case 'othermenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Other Menu')
                
 runtime = process.uptime()               
-othrmn = `
+othrmn = `┌─▣ 𝙾𝚃𝙷𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙊𝙏𝙃𝙀𝙍 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}sticker
-┣ ❐ ${prefix}colong
-┣ ❐ ${prefix}takestick
-┣ ❐ ${prefix}stickerwm
-┣ ❐ ${prefix}ocr
-┣ ❐ ${prefix}kontag
-┣ ❐ ${prefix}spatrick
-┣ ❐ ${prefix}viewsource
-┣ ❐ ${prefix}subdo
-┣ ❐ ${prefix}nmap
-┣ ❐ ${prefix}fak
-┣ ❐ ${prefix}hekweb
-┣ ❐ ${prefix}toimg
-┣ ❐ ${prefix}spamchat (use 62xx)
-┣ ❐ ${prefix}ssweb
-┣ ❐ ${prefix}sswebfull
-┣ ❐ ${prefix}telesticker
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
+├───────▻▻▻
+├ ❐ ${prefix}donasi
+├ ❐ ${prefix}sticker
+├ ❐ ${prefix}colong
+├ ❐ ${prefix}takestick
+├ ❐ ${prefix}stickerwm
+├ ❐ ${prefix}spatrick
+├ ❐ ${prefix}telesticker
+├ ❐ ${prefix}kontag
+├ ❐ ${prefix}ocr
+├ ❐ ${prefix}viewsource
+├ ❐ ${prefix}subdo
+├ ❐ ${prefix}nmap
+├ ❐ ${prefix}fak
+├ ❐ ${prefix}hekweb
+├ ❐ ${prefix}toimg
+├ ❐ ${prefix}spamchat (use 62xx)
+├ ❐ ${prefix}ssweb
+├ ❐ ${prefix}sswebfull
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -6837,7 +6858,7 @@ othrmn = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: othrmn})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: othrmn})
                 break
                     
                     
@@ -7150,62 +7171,62 @@ othrmn = `
 case 'sertimenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Sertifikat Menu')
                
 runtime = process.uptime()               
-sertimn = `
+sertimn = `┌─▣ 𝚂𝙴𝚁𝚃𝙸𝙵𝙸𝙺𝙰𝚃 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙎𝙀𝙍𝙏𝙄𝙁𝙄𝙆𝘼𝙏 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}tololserti
-┣ ❐ ${prefix}fuckboyserti
-┣ ❐ ${prefix}fuckgirlserti
-┣ ❐ ${prefix}bucinserti
-┣ ❐ ${prefix}pacarserti
-┣ ❐ ${prefix}goodboyserti
-┣ ❐ ${prefix}goodgirlserti
-┣ ❐ ${prefix}badboyserti
-┣ ❐ ${prefix}badgirlserti
-┣ ❐ ${prefix}hekelserti
-┣ ❐ ${prefix}fftourserti
-┣ ❐ ${prefix}fftourserti2
-┣ ❐ ${prefix}fftourserti3
-┣ ❐ ${prefix}fftourserti4
-┣ ❐ ${prefix}fftourserti5
-┣ ❐ ${prefix}mltourserti
-┣ ❐ ${prefix}mltourserti2
-┣ ❐ ${prefix}mltourserti3
-┣ ❐ ${prefix}mltourserti4
-┣ ❐ ${prefix}mltourserti5
-┣ ❐ ${prefix}pubgtourserti
-┣ ❐ ${prefix}pubgtourserti2
-┣ ❐ ${prefix}pubgtourserti3
-┣ ❐ ${prefix}pubgtourserti4
-┣ ❐ ${prefix}pubgtourserti5
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
+├───────▻▻▻
+├ ❐ ${prefix}tololserti
+├ ❐ ${prefix}fuckboyserti
+├ ❐ ${prefix}fuckgirlserti
+├ ❐ ${prefix}bucinserti
+├ ❐ ${prefix}pacarserti
+├ ❐ ${prefix}goodboyserti
+├ ❐ ${prefix}goodgirlserti
+├ ❐ ${prefix}badboyserti
+├ ❐ ${prefix}badgirlserti
+├ ❐ ${prefix}hekelserti
+├ ❐ ${prefix}fftourserti
+├ ❐ ${prefix}fftourserti2
+├ ❐ ${prefix}fftourserti3
+├ ❐ ${prefix}fftourserti4
+├ ❐ ${prefix}fftourserti5
+├ ❐ ${prefix}mltourserti
+├ ❐ ${prefix}mltourserti2
+├ ❐ ${prefix}mltourserti3
+├ ❐ ${prefix}mltourserti4
+├ ❐ ${prefix}mltourserti5
+├ ❐ ${prefix}pubgtourserti
+├ ❐ ${prefix}pubgtourserti2
+├ ❐ ${prefix}pubgtourserti3
+├ ❐ ${prefix}pubgtourserti4
+├ ❐ ${prefix}pubgtourserti5
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: sertimn})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: sertimn})
                 break
 				
 				
@@ -7407,46 +7428,46 @@ sertimn = `
 case 'grupmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan Grup Menu')
                
 runtime = process.uptime()               
-grpmn = `
+grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙂𝙍𝙐𝙋 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}nobadword
-┣ ❐ ${prefix}antilink
-┣ ❐ ${prefix}antivirtex
-┣ ❐ ${prefix}simih
-┣ ❐ ${prefix}group
-┣ ❐ ${prefix}setname
-┣ ❐ ${prefix}setdesc
-┣ ❐ ${prefix}promote
-┣ ❐ ${prefix}demote
-┣ ❐ ${prefix}kickall (rawan banned)
-┣ ❐ ${prefix}add
-┣ ❐ ${prefix}kick
-┣ ❐ ${prefix}linkgc
-┣ ❐ ${prefix}hidetag
-┣ ❐ ${prefix}mining
-┣ ❐ ${prefix}level
-┗━┫EfZyN-BoTヅ┣━⊳  
+┌「𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
+├───────▻▻▻
+├ ❐ ${prefix}nobadword
+├ ❐ ${prefix}antilink
+├ ❐ ${prefix}antivirtex
+├ ❐ ${prefix}simih
+├ ❐ ${prefix}group
+├ ❐ ${prefix}setname
+├ ❐ ${prefix}setdesc
+├ ❐ ${prefix}promote
+├ ❐ ${prefix}demote
+├ ❐ ${prefix}kickall
+├ ❐ ${prefix}add
+├ ❐ ${prefix}kick
+├ ❐ ${prefix}linkgc
+├ ❐ ${prefix}hidetag
+├ ❐ ${prefix}mining
+├ ❐ ${prefix}level
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
@@ -7454,7 +7475,7 @@ grpmn = `
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info `
 
 
- dp.sendMessage(from, buffer, image, {quoted: freply, caption: grpmn})
+ dp.sendMessage(from, backg, image, {quoted: freply, caption: grpmn})
                 break
                 
                 
@@ -7900,68 +7921,67 @@ grpmn = `
 		        case 'ownermenu':
                 //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
-                buffer = await getBuffer('https://i.ibb.co/L60p9Bj/IMG-20210626-WA0815.jpg')
+                backg = fs.readFileSync('./src/bg.jpg')
                 if (isLimit(sender)) return reply(dpa.limitend)
                 if (isBanned) return reply(dpa.baned)
                 reply('「 ❗ 」Menampilkan owner menu')
 				
 runtime = process.uptime()               
-ownmenu = `
+ownmenu = `┌─▣ 𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙄𝙣𝙛𝙤 𝙐𝙨𝙚𝙧▣ ━━⊳⊳⊳
-┣▣ 𝙽𝚊𝚖𝚊 : ${pushname}
-┣▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
-┣▣ 𝚁𝚘𝚕𝚎 : ${role}
-┣▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
 
-┏━━ ▣ 𝙏𝙞𝙢𝙚 ▣ ━━⊳⊳⊳
-┣▣ ${tampilUcapan}
-┣▣ 𝙹𝚊𝚖 : ${time}
-┣▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
-┗━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳ ━⊳
-
-┏「 𝙊𝙒𝙉𝙀𝙍 𝙈𝙀𝙉𝙐 ˩
-┣━━━━━━━━━━⊳⊳⊳
-┣ ❐ ${prefix}addprem 
-┣ ❐ ${prefix}dellprem
-┣ ❐ ${prefix}listprem
-┣ ❐ ${prefix}antidelete
-┣ ❐ ${prefix}nsfw
-┣ ❐ ${prefix}leveling
-┣ ❐ ${prefix}welcome
-┣ ❐ ${prefix}event
-┣ ❐ ${prefix}clone
-┣ ❐ ${prefix}delete
-┣ ❐ ${prefix}bc 
-┣ ❐ ${prefix}bcgc
-┣ ❐ ${prefix}block
-┣ ❐ ${prefix}unblock
-┣ ❐ ${prefix}addvn
-┣ ❐ ${prefix}getvn
-┣ ❐ ${prefix}setthumb
-┣ ❐ ${prefix}listvn
-┣ ❐ ${prefix}leave
-┣ ❐ ${prefix}tagall
-┣ ❐ ${prefix}clearall
-┣ ❐ ${prefix}setprefix
-┣ ❐ ${prefix}resetlimit
-┣ ❐ ${prefix}setlimit
-┣ ❐ ${prefix}setmemlimit
-┣ ❐ ${prefix}addbadword
-┣ ❐ ${prefix}delbadword
-┣ ❐ ${prefix}setppbot
-┣ ❐ ${prefix}ban
-┣ ❐ ${prefix}unban
-┣ ❐ ${prefix}bug
-┗━━━┫EfZyN-BoTヅ┣━━━⊳  
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
+├───────▻▻▻
+├ ❐ ${prefix}addprem
+├ ❐ ${prefix}dellprem
+├ ❐ ${prefix}listprem
+├ ❐ ${prefix}antidelete
+├ ❐ ${prefix}nsfw
+├ ❐ ${prefix}leveling
+├ ❐ ${prefix}welcome
+├ ❐ ${prefix}event
+├ ❐ ${prefix}clone
+├ ❐ ${prefix}delete
+├ ❐ ${prefix}bc
+├ ❐ ${prefix}bcgc
+├ ❐ ${prefix}block
+├ ❐ ${prefix}unblock
+├ ❐ ${prefix}addvn
+├ ❐ ${prefix}getvn
+├ ❐ ${prefix}setthumb
+├ ❐ ${prefix}listvn
+├ ❐ ${prefix}leave
+├ ❐ ${prefix}tagall
+├ ❐ ${prefix}clearall
+├ ❐ ${prefix}setprefix
+├ ❐ ${prefix}resetlimit
+├ ❐ ${prefix}setlimit
+├ ❐ ${prefix}setmemlimit
+├ ❐ ${prefix}addbadword
+├ ❐ ${prefix}delbadword
+├ ❐ ${prefix}setppbot
+├ ❐ ${prefix}ban
+├ ❐ ${prefix}unban
+└─┤EfZyN-BoTヅ├──▻ 
 
 ❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
 ❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
 ❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
 ❒ *𝙽𝙱* : Info Bot ketik ${prefix}info  `
 
-                dp.sendMessage(from, buffer, image, {quoted: freply, caption: ownmenu})
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: ownmenu})
                 break
 
 				default:
