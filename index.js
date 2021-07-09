@@ -4235,9 +4235,9 @@ stalkmn = `┌─▣ 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
                 ini_txt += `Description :\n ${get_info.description}\n\n\n`
                 ini_buffer = await getBuffer(get_info.thumbnail)
                 dp.sendMessage(from, ini_buffer, image, { quoted: freply, caption: ini_txt })
-                get_audio = await getBuffer(get_result.audio[3].link)
+                get_audio = await getBuffer(get_result.audio.link)
                 dp.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_info.title}.mp3`, quoed: freply})
-                get_video = await getBuffer(get_result.video[0].link)
+                get_video = await getBuffer(get_result.video.link)
                 dp.sendMessage(from, get_video, video, { mimetype: 'video/mp4', filename: `${get_info.title}.mp4`, quoed: freply})
                 await limitAdd(sender)
                 break
