@@ -66,6 +66,8 @@ const { recognize } = require('./lib/ocr')
 const { cmdadd } = require('./lib/totalcmd')
 const { antiSpam } = require('./lib/antispam')
 const { snk } = require('./lib/snk')
+const { snkprem } = require('./lib/snkprem')
+const { hrgprem } = require('./lib/hrgprem')
 const fontPath = ('./lib/Zahraaa.ttf')
 const { wait, h2k, generateMessageID, getRandom, getBuffer, getGroupAdmins, banner, start, info, success, close } = require('./lib/functions')
 const Exif = require('./lib/exif')
@@ -84,7 +86,7 @@ fake = 'EITS ADA ANTIDELETE🐦:v'
 namabot = 'EFZYN-BOT' //Ubah jadi nama bot lu
 namaowner = 'Fauzan' //Ubah jadi nama lu
 nomerlu = '6285156724122' //Ubah jadi nomer lu
-limitawal = '1906' //Ubah jadi sesuka lu
+limitawal = '20' //Ubah jadi sesuka lu
 memberlimit = '0' //Ubah jadi sesuka lu
 
 //vcard
@@ -109,6 +111,7 @@ const nsfw = JSON.parse(fs.readFileSync('./database/nsfw.json'))
 const antgdpaa = JSON.parse(fs.readFileSync('./database/tagdappa.json'))
 const ban = JSON.parse(fs.readFileSync('./database/banned.json'))
 const user = JSON.parse(fs.readFileSync('./database/user.json'))
+const prem = JSON.parse(fs.readFileSync('./database/premium.json'))
 const audionye = JSON.parse(fs.readFileSync('./database/audio.json'))
 const samih = JSON.parse(fs.readFileSync('./database/simi.json'))
 const event = JSON.parse(fs.readFileSync('./database/event.json'))
@@ -624,6 +627,7 @@ dp.on('message-new', async (dap) => {
 			const isCmd = body.startsWith(prefix)
 			const tescuk = ['0@s.whatsapp.net']
 			const isGroup = from.endsWith('@g.us')
+			const q = args.join(' ')
 			const botNumber = dp.user.jid
 			const sender = isGroup ? dap.participant : dap.key.remoteJid
 			const getLevel = getLevelingLevel(sender)
@@ -647,6 +651,7 @@ dp.on('message-new', async (dap) => {
 			groupo: `「 ❗ 」Command Ini Khusus Untuk Group`,
 			ownerb: `「 ❗ 」Command Ini Khusus Untuk Owner`,
 			ownerg: `「 ❗ 」Command Ini Khusus Untuk Owner Group`,
+			premiumu: '「 ❗ 」Command ini khusus PREMIUM user',
 			admin: `「 ❗ 」Command Ini Khusus Untuk Admin`,
 			badmin: `「 ❗ 」BOT Harus Menjadi Admin`,
 			nsfwoff: `「 ❗ 」Aktifkan Mode Nsfw!`,
@@ -677,6 +682,8 @@ dp.on('message-new', async (dap) => {
 			const isBadWord = isGroup ? badword.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isUser = user.includes(sender)
+			const isAdmin = adm.includes(sender)
+			const isPrem = prem.includes(sender)
 			const isBanned = ban.includes(sender)
 			const isImage = type === 'imageMessage'
 			const sekarang = new Date().getTime();
@@ -1008,8 +1015,13 @@ dp.on('message-new', async (dap) => {
    	         role = 'Legends 忍'
    	     }
    
-			var premi = 'User 🏅'
-			
+		var premi = 'Free 🏅'
+			if (!isAdmin) {
+				premi = 'Adminban'
+			}
+			if (!isPrem) {
+				premi = 'Premium'
+			} 
 			if (isOwner) {
 				premi = 'Owner ⚔️'
 		    }
@@ -1563,6 +1575,14 @@ donsh = `◪𝗱𝗼𝗻𝗮𝘀𝗶
                 if (isBanned) return reply(dpa.baned)
 		        dp.sendMessage(from, snk(), text, {quoted: fkontak})
 		        break
+		        case 'snkprem':
+		        case 'rulesprem':
+                if (!isUser) return reply(dpa.noregis)
+                if (!isPrem) return reply(dpa.premiumu)
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
+		        dp.sendMessage(from, snkprem(), text, {quoted: fkontak})
+		        break
 		        case 'lolhumcek':
                 //[❗] case by DappaGanz
                 try {
@@ -1619,7 +1639,7 @@ listmn = `┌─▣ 𝙼𝙴𝙽𝚄 𝙴𝙵𝚉𝚈𝙽𝙱𝙾𝚃 ▣
 ├▣ 𝙾𝚠𝚗𝚎𝚛 : ${namaowner}
 ├▣ 𝚃𝚘𝚝𝚊𝚕 𝚁𝚎𝚚 : ${pepolu}
 ├▣ 𝚃𝚘𝚝𝚊𝚕 𝚞𝚜𝚎𝚛 : ${user.length} ekor
-├▣ 𝙶𝚒𝚝𝚑𝚞𝚋 : https://github.com/BerrRecode
+├▣ 𝙶𝚒𝚝𝚑𝚞𝚋 : github.com/BerrRecode
 ├▣ 𝙶𝚌 𝚠𝚊 : https://cutt.ly/EfzynBoTgc
 └─▻ ─▻ ─▻ ─▻ ─▻ ─▻
 
@@ -1646,6 +1666,7 @@ listmn = `┌─▣ 𝙼𝙴𝙽𝚄 𝙴𝙵𝚉𝚈𝙽𝙱𝙾𝚃 ▣
 ├ ❐ ${prefix}𝚒𝚜𝚕𝚊𝚖𝚖𝚎𝚗𝚞
 ├ ❐ ${prefix}𝚒𝚗𝚏𝚘𝚖𝚎𝚗𝚞
 ├ ❐ ${prefix}𝚘𝚠𝚗𝚎𝚛𝚖𝚎𝚗𝚞
+├ ❐ ${prefix}𝚝𝚛𝚊𝚗𝚜𝚊𝚔𝚜𝚒𝚖𝚎𝚗𝚞
 ├ ❐ ${prefix}𝚖𝚊𝚔𝚎𝚛𝚖𝚎𝚗𝚞
 ├ ❐ ${prefix}𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚖𝚎𝚗𝚞
 ├ ❐ ${prefix}𝚜𝚝𝚊𝚕𝚔𝚎𝚛𝚖𝚎𝚗𝚞
@@ -4446,12 +4467,11 @@ downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
                 //[❗] case by DappaGanz
 				if (!isNsfw) return reply(dpa.nsfwoff)
 				if (!isUser) return reply(dpa.noregis)
+				if (!isPrem) return reply(dpa.premiumu)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
 				reply(dpa.wait)
 				dapuhy = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${LolKey}`)
 				dp.sendMessage(from, dapuhy, image, {quoted: freply})
-				await limitAdd(sender)
 				break
 				case 'hentai4everyone':
 				case 'animebellybutton':
@@ -4476,12 +4496,11 @@ downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
                 //[❗] case by DappaGanz
 				if (!isNsfw) return reply(dpa.nsfwoff)
 				if (!isUser) return reply(dpa.noregis)
+				if (!isPrem) return reply(dpa.premiumu)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
 				reply(dpa.wait)
 				dapuhy = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${LolKey}`)
 				dp.sendMessage(from, dapuhy, image, {quoted: freply})
-				await limitAdd(sender)
 				break
 				case 'hentai2':
                 //[❗] case by DappaGanz
@@ -4509,8 +4528,8 @@ downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
                 //[❗] case by DappaGanz
 				if (!isNsfw) return reply(dpa.nsfwoff)
 				if (!isUser) return reply(dpa.noregis)
+				if (!isPrem) return reply(dpa.premiumu)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
 				reply(dpa.wait)
                 ranp = getRandom('.gif')
                 rano = getRandom('.webp')
@@ -4521,7 +4540,6 @@ downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
                 dp.sendMessage(from, ambil, sticker, {quoted: freply})
                 fs.unlinkSync(rano)
                 })
-                await limitAdd(sender)
                 break
 				case 'blowjobgif':
                 //[❗] case by DappaGanz
@@ -7399,11 +7417,11 @@ sertimn = `┌─▣ 𝚂𝙴𝚁𝚃𝙸𝙵𝙸𝙺𝙰𝚃 𝙼𝙴𝙽𝚄 �
                 if (isBanned) return reply(dpa.baned)
                 if (!isGroup) return reply(dpa.groupo)
                 if (!isEventon) return reply(`maaf ${pushname} event mining tidak di aktifkan oleh owner`)
-                if (isOwner) {
+                if (isOwner | isPrem) {
                 const one = 99999
                 addLevelingXp(sender, one)
                 addLevelingLevel(sender, 99)
-                reply(`Nih Untukmu Owner♥ ${one}Xp `)
+                reply(`Nih Untukmu Sayang♥ ${one}Xp `)
                 }else{
                 const mining = Math.ceil(Math.random() * 16)
                 addLevelingXp(sender, mining)
@@ -7482,37 +7500,38 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
                 
 //==========================================BATES NGAB==========================================\\
 //OWNER MENU
-                    case 'addprem':
-					if (!isOwner) return reply(ind.ownerb())
-					adpr = body.slice(10)
-					premium.push(`${adpr}@s.whatsapp.net`)
-					fs.writeFileSync('./database/premium.json', JSON.stringify(premium))
-					efzyn1 = `Berhasil Menambahkan @${adpr.split("@")[0]} Ke Daftar Premium`
-					dp.sendMessage(from, efzyn1, text, { quoted: ftoko, contextInfo: {"mentionedJid": [adpr], forwardingScore: 1000, isForwarded: true }})
-					break
-				case 'dellprem':
-					if (!isOwner) return reply(ind.ownerb())
-					nik02 = body.slice(11)
-					delp = premium.indexOf(nik02)
-					premium.splice(delp, 1)
-					fs.writeFileSync('./database/premium.json', JSON.stringify(premium))
-					efzyn0 = `Berhasil Menghapus @${nik02.split("@")[0]} Ke Daftar Premium`
-					dp.sendMessage(from, efzyn0, text, { quoted: ftoko, contextInfo: {"mentionedJid": [nik02], forwardingScore: 1000, isForwarded: true }})
-					break			
+                    case 'premium':
+              case 'addprem':  
+				if (!isOwner) return reply(dpa.ownerb())
+				premm = body.slice(9)
+				adprem = `${args[0].replace('@','')}@s.whatsapp.net`
+					prem.push(adprem)
+				fs.writeFileSync('./database/premium.json', JSON.stringify(prem))
+				reply(`SELAMAT🎊 anda telah menjadi _PREMIUM_ USER.\nDengan nomor: wa.me/${premm} `)
+				break
+
+		  case 'dellprem':
+				if (!isOwner) return reply(dpa.ownerb())
+				delp = body.slice(10)
+				prem.splice(`${delp}@s.whatsapp.net`, 1)
+				fs.writeFileSync('./database/premium.json', JSON.stringify(prem))
+				reply(`MAAF anda bukan lagi _PREMIUM_ USER.\nDengan nomor: wa.me/${premm} `)
+				break
 					case 'premiumlist':
 					case 'premlist':
-					castle.updatePresence(from, Presence.composing) 
-                    if (!isRegistered) return reply(ind.noregis())
+					case 'listpremium':
+					case 'listprem':
+					dp.updatePresence(from, Presence.composing) 
+          if (!isUser) return reply(dpa.noregis())
 					teks = `*JUMLAH USER PREMIUM*\n`
-					no = 0
-					for (let premi of premium) {
-						no += 1
-						teks += `${no.toString()} @${premi.split('@')[0]}\n`
+				for (let premm of prem) {
+					teks += `~> @${premm.split('@')[0]}\n`
 					}
-					dp.sendMessage(from, teks.trim(), extendedText, {quoted: EfzynBot, contextInfo: {"mentionedJid": premi}})
+					teks += `Total : ${prem.length}\nUntuk user PREMIUM, silahkan cek ${prefix}snkprem untuk melihat rules yang sudah di tentukan`
+				dp.sendMessage(from, teks.trim(), extendedText, {quoted: ftoko, contextInfo: {'mentionedJid': prem}})
 					break
 				case 'antilink':
-				if (!isOwner) return reply(dpa.ownerb)
+				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 		        if (!isGroup) return reply(dpa.groupo)					
 				if (args.length < 1) return reply('[❗] Tambahkan parameter 1 untuk mengaktifkan dan 0 untuk menonaktifkan')
 				if (Number(args[0]) === 1) {
@@ -7559,7 +7578,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
                 dp.sendMessage(from, 'Sukses Ngab!!', text, { sendEphemeral: true, thumbnail: fs.readFileSync('./lib/logo.jpeg', 'base64')})
                 break
 				case 'antivirtex':
-				if (!isOwner) return reply(dpa.ownerb)
+				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 		        if (!isGroup) return reply(dpa.groupo)					
 				if (args.length < 1) return reply('[❗] Tambahkan parameter 1 untuk mengaktifkan dan 0 untuk menonaktifkan')
 				if (Number(args[0]) === 1) {
@@ -7578,7 +7597,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
                 case 'antidelete':
 				if (!isGroup) return reply(dpa.groupo)
-				if (!isOwner) return reply(dpa.ownerb)
+			if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				const dataRevoke = JSON.parse(fs.readFileSync('./src/gc-revoked.json'))
 				const dataCtRevoke = JSON.parse(fs.readFileSync('./src/ct-revoked.json'))
 				const dataBanCtRevoke = JSON.parse(fs.readFileSync('./src/ct-revoked-banlist.json'))
@@ -7632,7 +7651,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
 				case 'nsfw':
 				if (!isGroup) return reply(dpa.groupo)
-				if (!isOwner) return reply(dpa.ownerb)
+				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				if (args.length < 1) return reply('[❗] Tambahkan parameter 1 untuk mengaktifkan dan 0 untuk menonaktifkan')
 				if (Number(args[0]) === 1) {
 				if (isNsfw) return reply(`[❗] Fitur ${command} sudah aktif`)
@@ -7649,7 +7668,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
                 case 'leveling':
 				if (!isGroup) return reply(dpa.groupo)
-				if (!isOwner) return reply(dpa.ownerb)
+			if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
                 if (args.length < 1) return reply('[❗] Tambahkan parameter 1 untuk mengaktifkan dan 0 untuk menonaktifkan')
                 if (args[0] === '1') {
                 if (isLevelingOn) return reply(`[❗] Fitur ${command} sudah aktif`)
@@ -7666,7 +7685,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
 				case 'welcome':
 				if (!isGroup) return reply(dpa.groupo)
-				if (!isOwner) return reply(dpa.ownerb)
+			if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				if (args.length < 1) return reply('[❗] Tambahkan parameter 1 untuk mengaktifkan dan 0 untuk menonaktifkan')
 				if (Number(args[0]) === 1) {
 				if (isWelkom) return reply(`[❗] Fitur ${command} sudah aktif`)
@@ -7700,7 +7719,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
                 case 'event':
 				if (!isGroup) return reply(dpa.groupo)
-				if (!isOwner) return reply(dpa.ownerb)
+			if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				if (args.length < 1) return reply('[❗] Tambahkan parameter 1 untuk mengaktifkan dan 0 untuk menonaktifkan')
 				if (Number(args[0]) === 1) {
 				if (isEventon) return reply(`[❗] Fitur ${command} sudah aktif`)
@@ -7799,7 +7818,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
 				case 'tagall':
 				if (!isGroup) return reply(dpa.groupo)
-				if (!isOwner) return reply(dpa.ownerb)
+				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				members_id = []
 				teks = (args.length > 1) ? body.slice(8).trim() : ''
 				teks += '\n\n'
@@ -7811,7 +7830,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
 				case 'listvn':
 			    case 'vnlist':
-			    if (!isOwner) return reply(dpa.ownerb)
+			   if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				teks = 'List Vn:\n\n'
 				for (let awokwkwk of audionye) {
 					teks += `- ${awokwkwk}\n`
@@ -7820,7 +7839,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				dp.sendMessage(from, teks.trim(), extendedText, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: '393470602054-1351628616@g.us' } : {}) }, message: { 'imageMessage': { 'url': 'https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc', 'mimetype': 'image/jpeg', 'caption': `${ucapanFakereply}`, 'fileSha256': '+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=', 'fileLength': '28777', 'height': 1080, 'width': 1079, 'mediaKey': 'vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=', 'fileEncSha256': 'sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=', 'directPath': '/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69', 'mediaKeyTimestamp': '1610993486', 'jpegThumbnail': fs.readFileSync('lib/logo.jpeg')} } }, contextInfo: { 'mentionedJid': audionye } })
 				break
 				case 'addvn':
-			    if (!isOwner) return reply(dpa.ownerb)
+			    if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				if (!isQuotedAudio) return reply('reply vnnya')
 				svst = body.slice(7)
 				if (!svst) return reply('Nama audionya apa su?')
@@ -7833,7 +7852,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				await limitAdd(sender)
 				break
 			    case 'getvn':
-			    if (!isOwner) return reply(dpa.ownerb)
+			    if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 			    if (args.length < 1) return reply('Masukan nama yang terdaftar di list vn')
 				namastc = body.slice(7)
 				buffer = fs.readFileSync(`./src/audio/${namastc}.mp3`)
@@ -7841,6 +7860,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
 		        case 'clearall':
 				if (!isGroup) return reply(dpa.groupo)
+				if (isOwner) return reply(dpa.ownerb)
 				anu = await dp.chats.all()
 				dp.setMaxListeners(25)
 				for (let _ of anu) {
@@ -7904,15 +7924,15 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				reply('Makasih ya owner sayang untuk profil barunya😗')
 				break 
 				case 'ban':
-				if (!isOwner) return reply(dpa.ownerb)
+				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				bnnd = `${args[0].replace('@', '')}@s.whatsapp.net`
 				ban.push(bnnd)
 				fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
 				reply(`Nomor ${bnnd} telah dibanned!`)
 				break
 				case 'unban':
-				if (!isOwner) return reply(dpa.ownerb)
-				dap = `${args[0].replace('@', '')}@s.whatsapp.net`
+				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
+				ya = `${args[0].replace('@', '')}@s.whatsapp.net`
 				unb = ban.indexOf(dap)
 				ban.splice(unb, 1)
 				fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
@@ -7983,6 +8003,176 @@ ownmenu = `┌─▣ 𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
 
                 dp.sendMessage(from, backg, image, {quoted: freply, caption: ownmenu})
                 break
+
+//==========================================BATES NGAB==========================================\\
+//TRANSAKSI MENU
+      case 'dompet':
+        case 'cekuang':
+        case 'saldo':
+        case 'atm':
+        if (!isUser) return reply(dpa.noregis)
+				if (isBanned) return reply(dpa.baned)
+				const uangkau = checkATMuser(sender)
+teks = `◪ *「 ATM 」*
+├─ ❏ *Name* : ${pushname}
+├─ ❏ *Nomor* : ${sender.split("@")[0]}
+└─ ❏ *Uang* : ${uangkau} `
+				dp.sendMessage(from, teks, text)
+				break
+				
+				case 'limit':
+          case 'ceklimit':
+          checkLimit(sender)
+		        break
+		        
+				case 'buylimit':
+				
+       if (!isUser) return reply( dpa.noregis())
+				if (isBanned) return reply(dpa.baned)
+				payin = body.slice(10)
+				const koinPerlimit = 2000
+				const total = koinPerlimit * payin
+				if ( checkATMuser(sender) <= total) return reply(`Maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
+				if ( checkATMuser(sender) >= total ) {
+					confirmATM(sender, total)
+					bayarLimit(sender, payin)
+					await reply(`*「 PEMBAYARAN BERHASIL 」*\n\n*Pengirim* : Admin\n*Penerima* : ${pushname}\n*Nominal pembelian* : ${payin} \n*Harga limit* : ${koinPerlimit}/limit\n*Sisa uang mu* : ${checkATMuser(sender)}\n\nProses berhasil dengan nomer pembayaran\n${bikinSerial(20)}`)
+				} 
+				break
+				
+				case 'buypremlimit':
+        if (!isUser) return reply( dpa.noregis())
+        if (!isPrem) return reply('TRANSAKSI ini hanya untuk PREMIUM USER')
+				if (isBanned) return reply(dpa.baned)
+				payout = body.slice(14)
+				const koinpremPerlimit = 500
+				const totalprem = koinpremPerlimit * payout
+				if ( checkATMuser(sender) <= totalprem) return reply(`Maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
+				if ( checkATMuser(sender) >= totalprem ) {
+					confirmATM(sender, totalprem)
+					bayarLimit(sender, payout)
+					await reply(`*「 PEMBAYARAN BERHASIL 」*\n\n*Pengirim* : ${namaowner}\n*Penerima* : ${pushname}\n*Nominal pembelian* : ${payout} \n*Harga limit* : ${koinpremPerlimit}/limit\n*Sisa uang mu* : ${checkATMuser(sender)}\n\nProses berhasil dengan nomer pembayaran\n${bikinSerial(20)}`)
+				} 
+				break
+				
+					case 'giftlimit': 
+        if (!isUser) return reply( dpa.noregis())
+				const nomerr = args[0].replace('@','')
+        const jmla = args[1]
+       if (jmla <= 1) return reply(`minimal gift limit adalah 1`)
+      if (isNaN(jmla)) return reply(`limit harus berupa angka`)
+        if (!nomerr) return reply(`maaf format salah\nmasukan parameter yang benar\ncontoh : ${prefix}giftlimit @62895336253039 20`)
+        const cysz = nomerr + '@s.whatsapp.net'
+        var found = false
+       Object.keys(_limit).forEach((i) => {
+       if(_limit[i].id === cysz){
+        found = i
+         }
+        })
+      if (found !== false) {
+      _limit[found].limit -= jmla
+     const updated = _limit[found]
+const result = `Gift kuota limit sukses dengan NS: ${bikinSerial(20)} pada ${moment().format('DD/MM/YY HH:mm:ss')}
+*「 GIFT KUOTA LIMIT 」*
+• User : @${updated.id.replace('@s.whatsapp.net','')}
+• Limit: ${limitawal-updated.limit}`
+             console.log(_limit[found])
+          fs.writeFileSync('./database/limit.json',JSON.stringify(_limit));
+          reply(result)
+  } else {
+          reply(`Maaf, nomor ${nomerr} tidak terdaftar di database!`)
+                        	}
+               			break
+				
+				case 'transfer':
+				  case 'tf':
+				    case 'tfuang':
+				
+                 if (!isUser) return reply( dpa.noregis())
+				if (!q.includes('|')) return  reply(dpa.wrongf())
+                		const tujuan = q.substring(0, q.indexOf('|') - 1)
+                		const jumblah = q.substring(q.lastIndexOf('|') + 1)
+                		if(isNaN(jumblah)) return await reply('jumlah harus berupa angka!!')
+                		if (jumblah < 5000 ) return reply(`minimal transfer 5000`)
+                		if (checkATMuser(sender) < jumblah) return reply(`uang anda tidak mencukupi untuk melakukan transfer`)
+                		const tujuantf = `${tujuan.replace("@", '')}@s.whatsapp.net`
+                		fee = 0.010 *  jumblah
+                		hasiltf = jumblah - fee
+                		addKoinUser(tujuantf, hasiltf)
+                		confirmATM(sender, jumblah)
+                		addKoinUser('62895336253039@s.whatsapp.net', fee)
+                		reply(`*「 SUKSES 」*\n\nPengiriman uang telah sukses\nDari : +${sender.split("@")[0]}\nKe : +${tujuan}\njJumlah transfer : ${jumblah}\nPajak : ${fee}`)
+                		break
+                		
+             case 'buypremium':
+    		if (!isUser) return reply( dpa.noregis())
+          if (isBanned) return reply(dpa.baned)
+                if (args.length < 1) return reply(`Jika ingin beli licensi Premium\nSilahkan isi FORM berikut:\n*BUY LICENSI PREMIUM*\nNama:\ndurasi:\njumlah gc:\njenis gc:\npembayaran:\n==================\n\n\nnote:\n -pembayaran melayani via: dana, ovo, gopay, linkaja, QRIS.`)
+				const psnprm = body.slice(12)
+				var nomeer = dap.participant
+				const teksprm1 = `[BUY LICENSI PREMIUM]\nNomor : @${nomeer.split('@s.whatsapp.net')[0]}\nPesan : ${psnprm}`
+				var options = {
+				text: teksprm1,
+				contextInfo: {mentionedJid: [nomeer]},
+				}
+				dp.sendMessage(`${nomerlu}@s.whatsapp.net`, options, text, {quoted: fkontak})
+				reply('[❗] PERMINTAAN telah di kirim  ke owner ku, silahkan tunggu respon dari owner untuk tindakan selanjutnya')
+				break
+
+          case 'hrgprem':
+		        case 'hargapremium':
+                if (!isUser) return reply(dpa.noregis)
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
+		        dp.sendMessage(from, hrgprem(), text, {quoted: fkontak})
+		        break
+
+    case 'transaksimenu':
+       //case ⌈❗」 by  Fauzan
+                if (!isUser) return reply(dpa.noregis)
+                backg = fs.readFileSync('./src/bg.jpg')
+                if (isLimit(sender)) return reply(dpa.limitend)
+                if (isBanned) return reply(dpa.baned)
+                reply('「 ❗ 」Menampilkan Transaksi menu')
+				
+runtime = process.uptime()               
+atmenu = `┌─▣ 𝚃𝚁𝙰𝙽𝚂𝙰𝙺𝚂𝙸𝙼𝙴𝙽𝚄 ▣
+│
+├─ ▣ 𝙸𝙽𝙵𝙾 𝚄𝚂𝙴𝚁 ▣ ──▻▻▻
+├▣ 𝙽𝚊𝚖𝚊 : ${pushname}
+├▣ 𝙽𝚘𝚖𝚘𝚛 : wa.me/${sender.split('@')[0]}
+├▣ 𝚁𝚘𝚕𝚎 : ${role}
+├▣ 𝙻𝚎𝚟𝚎𝚕 : ${getLevel}
+└─▻ ─▻ ─▻ ─▻ ─▻ ─▻ ─▻
+
+┌─ ▣ 𝚃𝙸𝙼𝙴 ▣ ──▻▻
+├▣ ${tampilUcapan}
+├▣ 𝙹𝚊𝚖 : ${time}
+├▣ 𝙷𝚊𝚛𝚒 : ${tampilHari}
+└─▻ ─▻ ─▻ ─▻ ─▻
+
+┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁 ˩
+├───────▻▻▻
+├ ❐ ${prefix}saldo
+├ ❐ ${prefix}ceklimit
+├ ❐ ${prefix}buylimit
+├ ❐ ${prefix}buypremlimit
+├ ❐ ${prefix}buypremium
+├ ❐ ${prefix}giftlimit
+├ ❐ ${prefix}tfuang
+├ ❐ ${prefix}hargapremium
+└─┤EfZyN-BoTヅ├──▻ 
+
+❒ *𝙽𝙱* : Bug? Error? ketik ${prefix}report [pesan]
+❒ *𝙽𝙱* : Ada Saran? ketik ${prefix}saran [pesan]
+❒ *𝙽𝙱* : Rules Bot ketik ${prefix}snk
+❒ *𝙽𝙱* : Info Bot ketik ${prefix}info  `
+
+                dp.sendMessage(from, backg, image, {quoted: freply, caption: atmenu})
+                break
+      
+      
+
 
 				default:
 				if (isGroup && isSimi && budy != undefined && body.startsWith(``)) {
