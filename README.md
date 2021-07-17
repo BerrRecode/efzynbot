@@ -21,6 +21,8 @@ EfzynBoT
     <li>apt install git</li>
     <li>apt install mc</li>
     <li>git clone https://github.com/efzyn/efzynbot.git</li>
+    <li>cd</li>
+    <li>cd (nama file bot)</li>
     <li>bash install.sh (optional, jika tanpa bash bisa langsung selanjutnya)</li>
     <li>npm i</li>
     <li>npm start</li>

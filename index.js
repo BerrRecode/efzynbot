@@ -77,7 +77,7 @@ const exif = new Exif()
 const { convertSticker } = require('./plugins/swm.js')
 
 //Modal Dikit Broh:v
-LeysKey = 'dappakntlll' //beli di https://leyscoders-api.herokuapp.com
+LeysKey = 'YOUR APIKEY' //beli di https://leyscoders-api.herokuapp.com
 LolKey = 'YOUR APIKEY' //beli di https://api.lolhuman.xyz
 ZeksKey = 'YOUR APIKEY' //beli lah di https://zeks.xyz
 
@@ -99,6 +99,7 @@ const vcard = 'BEGIN:VCARD\n'
               
 //ini biarin aja
 blocked = []
+hitt = []
 
 //ownernumber
 const ownerNumber = [`${6285156724122}@s.whatsapp.net`] //gausah diganti
@@ -118,6 +119,7 @@ const event = JSON.parse(fs.readFileSync('./database/event.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/limit.json'))
 const uang = JSON.parse(fs.readFileSync('./database/uang.json'))
 const adm = JSON.parse(fs.readFileSync('./database/admin.json'))
+const afk = JSON.parse(fs.readFileSync('./database/afk.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const bad = JSON.parse(fs.readFileSync('./database/bad.json'))
@@ -627,6 +629,10 @@ dp.on('message-new', async (dap) => {
 			const isCmd = body.startsWith(prefix)
 			const tescuk = ['0@s.whatsapp.net']
 			const isGroup = from.endsWith('@g.us')
+			const mentionUser = type == "extendedTextMessage" ? dap.message.extendedTextMessage.contextInfo.mentionedJid || [] : []
+            mentionByReply = type == "extendedTextMessage" ? dap.message.extendedTextMessage.contextInfo.participant || "" : ""
+            mentionUser.push(mentionByReply)
+            hitt.push(command)
 			const q = args.join(' ')
 			const botNumber = dp.user.jid
 			const sender = isGroup ? dap.participant : dap.key.remoteJid
@@ -1377,6 +1383,24 @@ await reply(m)
 				})	
 
 			}
+			
+			//afkbroooo
+			for (let x of mentionUser) {
+                if (afk.hasOwnProperty(x.split('@')[0])) {
+                    aefka = "Dia Lagi Afk bro!?\n"
+                    if (afk[x.split('@')[0]] != "") {
+                        aefka += "Dengan alasan " + afk[x.split('@')[0]]
+                    }
+                    dp.sendMessage(from, aefka, text, {quoted: dap})
+                }
+            }
+            if (afk.hasOwnProperty(sender.split('@')[0])) {
+                reply("Anda telah keluar dari mode afk.")
+                delete afk[sender.split('@')[0]]
+                fs.writeFileSync("./database/afk.json", JSON.stringify(afk))
+            }
+            
+            
 
 			switch(command) {
 //==========================================BATES NGAB==========================================\\
@@ -1531,6 +1555,10 @@ donsh = `◪𝗱𝗼𝗻𝗮𝘀𝗶
 │Silahkan Kirim ${prefix}menu
 │Total Pengguna: ${user.length} Orang
 ╰─────────────────────────
+║▌│█║▌│ █║▌│█│║▌║
+║▌│█║▌│ █║▌│█│║▌║
+      *「 EfZyNBOT 」*
+
 `
                 let buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/verify?nama=${encodeURI(pushname)}&member=${user.length}&seri=${seriTod}&pp=${ppimg}&bg=${imglu}`)
                 dp.sendMessage(from, buff, MessageType.image, {quoted: freply, caption: kentod, contextInfo: {'mentionedJid': [sender]}})
@@ -2162,6 +2190,34 @@ listmn = `┌─▣ 𝙼𝙴𝙽𝚄 𝙴𝙵𝚉𝚈𝙽𝙱𝙾𝚃 ▣
 				}
                 break
                 
+                case 'ktpmaker':
+		if (!isUser) return reply(dpa.noregis())
+		if (isLimit(sender)) return reply(dpa.limitend)
+    if (isBanned) return reply(dpa.baned)
+		if (!isPrem) return reply(`Perintah ini hanya khusus Premium Ketik ${prefix}buypremium Untuk Membeli Premium`)
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\nExample: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|Manik|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/Xb2pZ88/test.jpg`)
+                    get_args = args.join(" ").split("|")
+                    nik = get_args[0]
+                    prov = get_args[1]
+                    kabu = get_args[2]
+                    name = get_args[3]
+                    ttl = get_args[4]
+                    jk = get_args[5]
+                    jl = get_args[6]
+                    rtrw = get_args[7]
+                    lurah = get_args[8]
+                    camat = get_args[9]
+                    agama = get_args[10]
+                    nikah = get_args[11]
+                    kerja = get_args[12]
+                    warga = get_args[13]
+                    until = get_args[14]
+                    img = get_args[15]
+                    ini_buffer = await getBuffer(`http://api.lolhuman.xyz/api/ktpmaker?apikey=${LolKey}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`)
+                    dp.sendMessage(from, ini_buffer, image, { quoted: freply})
+                     await limitAdd(sender)
+                    break
+                
                 case 'makermenu':
                 //case⌈❗」 by Fauzan
                 if (!isUser) return reply(dpa.noregis)
@@ -2188,6 +2244,7 @@ makermenu = `┌─▣ 𝙼𝙰𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
 
 ┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
 ├───────▻▻▻
+├ ❐ ${prefix}ktpmaker
 ├ ❐ ${prefix}blackpink
 ├ ❐ ${prefix}neon
 ├ ❐ ${prefix}greenneon
@@ -3989,8 +4046,8 @@ aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
 //STALKER MENU
 				case 'igstalk':
 				if (!isUser) return reply(dpa.noregis)
+				if (!isPrem) return reply(dpa.premiumu)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
 				reply('[❗] Sabar lagi stalking IG nya')
 				get_result = await fetchJson(`http://lolhuman.herokuapp.com/api/stalkig/${body.slice(9)}?apikey=${LolKey}`)
 				get_result = get_result.result
@@ -4002,23 +4059,21 @@ aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
 				txt += `Bio : ${get_result.bio}\n`
 				buffer = await getBuffer(get_result.photo_profile)
 				dp.sendMessage(from, buffer, image, {quoted: freply, caption: txt})
-				await limitAdd(sender)
 				break
 				case 'pptiktok':
                 //[❗] case by DappaGanz
 				if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
+				if (!isPrem) return reply(dpa.premiumu)
 				reply(dpa.wait)
 				dptod = args.join(' ')
 				kntl = await getBuffer(`https://api.lolhuman.xyz/api/pptiktok/${dptod}?apikey=${LolKey}`)
 				dp.sendMessage(from, kntl, image, {quoted: freply})
-				await limitAdd(sender)
 				break
 				case 'githubstalk':
 				if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
+				if (!isPrem) return reply(dpa.premiumu)
 				reply('[❗] Sabar lagi stalking GitHub nya')
 				get_result = await fetchJson(`http://lolhuman.herokuapp.com/api/github/${body.slice(13)}?apikey=${LolKey}`)
 				get_result = get_result.result
@@ -4034,12 +4089,11 @@ aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
 				txt += `Bio : ${get_result.bio}\n`
 				buffer = await getBuffer(get_result.avatar)
 				dp.sendMessage(from, buffer, image, {quoted: freply, caption: txt})
-				await limitAdd(sender)
 				break
 				case 'tiktokstalk':
 				if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
+				if (!isPrem) return reply(dpa.premiumu)
 				reply('[❗] Sabar lagi stalking TikTok nya')
 				username = args[0]
 				get_result = await fetchJson(`http://lolhuman.herokuapp.com/api/stalktiktok/${username}?apikey=${LolKey}`)
@@ -4052,12 +4106,11 @@ aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
 				txt += `Vidio : ${get_result.video}\n`
 				buffer = await getBuffer(get_result.user_picture)
 				dp.sendMessage(from, buffer, image, {quoted: freply, caption: txt})
-				await limitAdd(sender)
 				break
 				case 'ytstalk':
 				if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
+				if (!isPrem) return reply(dpa.premiumu)
 				reply('[❗] Sabar lagi stalking YT nya')
 				ytk = args.join(' ')
 				anu = await fetchJson(`http://api.lolhuman.xyz/api/ytchannel?apikey=${LolKey}&query=${ytk}`)
@@ -4066,13 +4119,12 @@ aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
 				cari += `Chanel : ${search.channel_name}\nTentang : ${search.channel_about}\nCreated : ${search.channel_created}\nLink : https://youtu.com/channel/${search.channel_id}\n•••••••••••••••••\n`
 				}
 				reply(cari.trim())
-				await limitAdd(sender)
 				break
 				case 'mlstalk':
                 //[❗] case by DappaGanz
 				if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
+			  if (!isPrem) return reply(dpa.premiumu)
 				reply('[❗] Sabar lagi stalking Mobile Legend nya')
 				ha = args.join(' ')
 				id = ha.split('|')[0]
@@ -4080,19 +4132,17 @@ aspnmn = `┌─▣ 𝙰𝚂𝚄𝙿𝙰𝙽 𝙼𝙴𝙽𝚄 ▣
 				get_result = await fetchJson(`https://api.lolhuman.xyz/api/mobilelegend/${id}/${server}?apikey=${LolKey}`)
 				txt = `Nickname : ${get_result.result}`
 				dp.sendMessage(from, txt, text, {quoted: fkontak})
-				await limitAdd(sender)
 				break
 				case 'ffstalk':
                 //[❗] case by DappaGanz
 				if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
+				if (!isPrem) return reply(dpa.premiumu)
 				reply('[❗] Sabar lagi stalking Free Fire nya')
 				id = args.join(' ')
 				ngntl = await fetchJson(`https://api.lolhuman.xyz/api/freefire/${id}?apikey=${LolKey}`)
 				hsil = `Nickname : ${ngntl.result}`
 				dp.sendMessage(from, hsil, text, {quoted: fkontak})
-				await limitAdd(sender)
 				break
 				
                 case 'stalkermenu':
@@ -4142,10 +4192,11 @@ stalkmn = `┌─▣ 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
 //==========================================BATES NGAB==========================================\\
 //DOWNLOAD MENU
                 case 'tiktoknowm':
+                  case 'ttnowm':
                 //[❗] case by DappaGanz
 				if (!isUser) return reply(dpa.noregis)
+				if (!isPrem) return reply(dpa.premiumu)
 				if (isBanned) return reply(dpa.baned)
-				if (isLimit(sender)) return reply(dpa.limitend)
                 if (args.length < 1) return reply(`link mana broh?\ncontoh : ${prefix + command} https://vm.tiktok.com/ZSJkHUCwK/`)
                 reply(dpa.wait)
                 link = args.join(' ')
@@ -4158,23 +4209,23 @@ stalkmn = `┌─▣ 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
                 dp.sendMessage(from, apatar, image, {quoted: freply, caption: 'profile yang punya video:v'})
                 dp.sendMessage(from, magee, image, {quoted: freply, caption: textt})
                 dp.sendMessage(from, buffer, video, {quoted: freply, caption: 'nih videonya'})
-                await limitAdd(sender)
                 break
-                case 'tiktokdownload':
-                //[❗] case by DappaGanz
-				if (!isUser) return reply(dpa.noregis)
+                
+                case 'tiktokdl':
+                  case 'tiktokdownload':
+       if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
 				if (isLimit(sender)) return reply(dpa.limitend)
-                if (args.length < 1) return reply(`link mana broh?\ncontoh : ${prefix + command} https://vm.tiktok.com/ZSJkHUCwK/`)
+          if (args.length < 1) return reply(`link mana broh?\ncontoh : ${prefix + command} https://vm.tiktok.com/ZSJkHUCwK/`)
                 reply(dpa.wait)
                 link = args.join(' ')
-                dppa = await fetchJson(`https://dapuhy-api.herokuapp.com/api/socialmedia/tiktokdownload?url=${link}`)
-                wm = await getBuffer(dppa.with_watermark)
-                nowm = await getBuffer(dppa.no_watermark)
-                dp.sendMessage(from, wm, video, {quoted: freply, caption: 'nih yang ada watermark'})
-                dp.sendMessage(from, nowm, video, {quoted: freply, caption: 'nih yang no watermark'})
+                tete = await fetchJson(`https://api.lolhuman.xyz/api/tiktok2?apikey=${LolKey}&url=${link}`)
+                fzn = tete.result
+              buffer = await getBuffer(fzn.link)
+                dp.sendMessage(from, buffer, video, {quoted: freply, caption: 'ini vidionya ya ngabss_-'})
                 await limitAdd(sender)
-                break
+            break
+                
                 case 'igvideo':
                 //[❗] case by DappaGanz
 				if (!isUser) return reply(dpa.noregis)
@@ -4206,22 +4257,20 @@ stalkmn = `┌─▣ 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
                     await limitAdd(sender)
                     break
                     
+                    /*
                     case 'igstory':
                   //「❗」case by Fauzan
                 if (!isUser) return reply(dpa.noregis)
 				if (isBanned) return reply(dpa.baned)
 				if (isLimit(sender)) return reply(dpa.limitend)
-               if (args.length < 1) return reply(`usernamenya mana?\ncontoh : ${prefix + command} efzyn_`)
                 reply(dpa.wait)
-                query = args.join(' ')
-                get_result = await fetchJson(`https://api.lolhuman.xyz/api/igstory?username=${username}&apikey=${LolKey}`)
+                get_result = await fetchJson(`https://api.lolhuman.xyz/api/igstory/${body.slice(9)}?apikey=${LolKey}`)
                 get_result = get_result.result
-                ini_image = await getBuffer(get_result.image)
-                dp.sendMessage(from, ini_image, image, { quoted: freply})
-                get_video = await getBuffer(get_result.video)
-                dp.sendMessage(from, get_video, video, {quoted: freply, mimetype: Mimetype.mp4, filename: "igstory.mp4" })
+               buffer = await getBuffer(get_result.result)
+                    dp.sendMessage(from, buffer, video, { quoted: freply})
                 await limitAdd(sender)
                     break
+                    */
                 
                 case 'igphoto':
                 //[❗] case by DappaGanz
@@ -4259,7 +4308,7 @@ stalkmn = `┌─▣ 𝚂𝚃𝙰𝙻𝙺𝙴𝚁 𝙼𝙴𝙽𝚄 ▣
                 get_audio = await getBuffer(get_result.audio.link)
                 dp.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_info.title}.mp3`, quoed: freply})
                 get_video = await getBuffer(get_result.video.link)
-                dp.sendMessage(from, get_video, video, { mimetype: 'video/mp4', filename: `${get_info.title}.mp4`, quoed: freply})
+                dp.sendMessage(from, get_video, video, { mimetype: 'video/mp4', filename: `${get_info.title}.mp4`, quoted: freply})
                 await limitAdd(sender)
                 break
                 case 'ytplay2':
@@ -4417,7 +4466,7 @@ downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
 ┌「 𝙻𝙸𝚂𝚃 𝙵𝙸𝚃𝚄𝚁  ˩
 ├───────▻▻▻
 ├ ❐ ${prefix}tiktoknowm
-├ ❐ ${prefix}tiktokdownload
+├ ❐ ${prefix}tiktokdl
 ├ ❐ ${prefix}ytplay
 ├ ❐ ${prefix}ytplay2
 ├ ❐ ${prefix}ytmp3
@@ -4426,7 +4475,6 @@ downmenu = `┌─▣ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄 ▣
 ├ ❐ ${prefix}ytmp4
 ├ ❐ ${prefix}ytmp4v2
 ├ ❐ ${prefix}igdownload
-├ ❐ ${prefix}igstory (develop)
 ├ ❐ ${prefix}igvideo
 ├ ❐ ${prefix}igphoto
 └─┤EfZyN-BoTヅ├──▻ 
@@ -7443,6 +7491,17 @@ sertimn = `┌─▣ 𝚂𝙴𝚁𝚃𝙸𝙵𝙸𝙺𝙰𝚃 𝙼𝙴𝙽𝚄 �
                 }
                 break
                 
+                case 'afk':
+                    alasan = args.join(" ")
+                    afk[sender.split('@')[0]] = alasan.toLowerCase()
+                    fs.writeFileSync("./database/afk.json", JSON.stringify(afk))
+                    aefka = "Anda telah afk\n\n"
+                    if (alasan != "") {
+                        aefka += "Dengan alasan :"  + alasan
+                    }
+                    reply(aefka)
+                    break
+                
 case 'grupmenu':
 		            //case ⌈❗」 by  Fauzan
                 if (!isUser) return reply(dpa.noregis)
@@ -7481,6 +7540,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 ├ ❐ ${prefix}kickall
 ├ ❐ ${prefix}add
 ├ ❐ ${prefix}kick
+├ ❐ ${prefix}afk (alasan)
 ├ ❐ ${prefix}linkgc
 ├ ❐ ${prefix}hidetag
 ├ ❐ ${prefix}mining
@@ -7820,10 +7880,11 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				if (!isGroup) return reply(dpa.groupo)
 				if (!isPrem) return reply('FITUR INI HANYA UNTUK OWNERKU SAYANG/USER PREMIUM ONLY')
 				members_id = []
+				const getmemtot = groupMembers.length
 				teks = (args.length > 1) ? body.slice(8).trim() : ''
 				teks += '\n\n'
 				for (let mem of groupMembers) {
-				teks += `➡️ @${mem.jid.split('@')[0]}\n`
+				teks += `tag➡️ @${mem.jid.split('@')[0]}\n`
 				members_id.push(mem.jid)
 				}
 				mentions(teks, members_id, true)
@@ -7860,7 +7921,7 @@ grpmn = `┌─▣ 𝙶𝚁𝚄𝙿 𝙼𝙴𝙽𝚄 ▣
 				break
 		        case 'clearall':
 				if (!isGroup) return reply(dpa.groupo)
-				if (isOwner) return reply(dpa.ownerb)
+				if (!isOwner) return reply(dpa.ownerb)
 				anu = await dp.chats.all()
 				dp.setMaxListeners(25)
 				for (let _ of anu) {
