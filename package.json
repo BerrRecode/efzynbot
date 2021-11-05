@@ -1,6 +1,6 @@
 {
   "name": "termux-wabot",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "No comment",
   "main": "index.js",
   "directories": {
